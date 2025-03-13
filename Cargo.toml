@@ -116,8 +116,8 @@ pedronauck-streams-store = { version = "0.0.27", path = "crates/store" }
 pedronauck-streams-subject = { version = "0.0.27", path = "crates/subject" }
 pedronauck-streams-test = { version = "0.0.22", path = "crates/test" }
 pedronauck-streams-types = { version = "0.0.27", path = "crates/types" }
+pedronauck-subject-derive = { version = "0.0.27", path = "crates/subject/subject-derive" }
 pedronauck-web-utils = { version = "0.0.27", path = "crates/web-utils" }
-subject-derive = { version = "0.0.27", path = "crates/subject/subject-derive" }
 
 # Workspace projects
 [workspace.metadata.cargo-machete]

@@ -14,18 +14,18 @@
         <a href="https://codecov.io/gh/FuelLabs/data-systems" style="text-decoration: none;">
             <img src="https://codecov.io/gh/FuelLabs/data-systems/graph/badge.svg?token=1zna00scwj" alt="Coverage">
         </a>
-        <a href="https://crates.io/crates/subject-derive" style="text-decoration: none;">
-            <img alt="Crates.io MSRV" src="https://img.shields.io/crates/msrv/subject-derive">
+        <a href="https://crates.io/crates/pedronauck-subject-derive" style="text-decoration: none;">
+            <img alt="Crates.io MSRV" src="https://img.shields.io/crates/msrv/pedronauck-subject-derive">
         </a>
-        <a href="https://crates.io/crates/subject-derive" style="text-decoration: none;">
-            <img src="https://img.shields.io/crates/v/subject-derive?label=latest" alt="crates.io">
+        <a href="https://crates.io/crates/pedronauck-subject-derive" style="text-decoration: none;">
+            <img src="https://img.shields.io/crates/v/pedronauck-subject-derive?label=latest" alt="crates.io">
         </a>
-        <a href="https://docs.rs/subject-derive/" style="text-decoration: none;">
-            <img src="https://docs.rs/subject-derive/badge.svg" alt="docs">
+        <a href="https://docs.rs/pedronauck-subject-derive/" style="text-decoration: none;">
+            <img src="https://docs.rs/pedronauck-subject-derive/badge.svg" alt="docs">
         </a>
     </p>
     <p align="center">
-        <a href="https://docs.rs/subject-derive/">📚 Documentation</a>
+        <a href="https://docs.rs/pedronauck-subject-derive/">📚 Documentation</a>
         <span>&nbsp;</span>
         <a href="https://github.com/fuellabs/data-systems/issues/new?labels=bug&template=bug-report---.md">🐛 Report Bug</a>
         <span>&nbsp;</span>
