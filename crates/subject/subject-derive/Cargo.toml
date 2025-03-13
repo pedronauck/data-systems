@@ -1,5 +1,5 @@
 [package]
-name = "subject-derive"
+name = "pedronauck-subject-derive"
 description = "Derive macro for implementing the Subject trait in the pedronauck-streams crate"
 authors.workspace = true
 edition.workspace = true

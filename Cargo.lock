@@ -7021,10 +7021,10 @@ version = "0.0.27"
 dependencies = [
  "downcast-rs",
  "indexmap 2.8.0",
+ "pedronauck-subject-derive",
  "pretty_assertions",
  "serde",
  "serde_json",
- "subject-derive",
  "test-case",
  "thiserror 2.0.12",
 ]
@@ -7080,6 +7080,16 @@ dependencies = [
  "tokio",
  "tracing",
  "utoipa",
+]
+
+[[package]]
+name = "pedronauck-subject-derive"
+version = "0.0.27"
+dependencies = [
+ "proc-macro-error",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -9609,16 +9619,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "rustversion",
- "syn 2.0.100",
-]
-
-[[package]]
-name = "subject-derive"
-version = "0.0.27"
-dependencies = [
- "proc-macro-error",
- "proc-macro2",
- "quote",
  "syn 2.0.100",
 ]
 

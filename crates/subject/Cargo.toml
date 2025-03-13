@@ -13,9 +13,9 @@ version.workspace = true
 [dependencies]
 downcast-rs = "2.0.1"
 indexmap.workspace = true
+pedronauck-subject-derive.workspace = true
 serde.workspace = true
 serde_json.workspace = true
-subject-derive.workspace = true
 thiserror.workspace = true
 
 [dev-dependencies]

@@ -65,7 +65,7 @@ release = true
 publish = true
 
 [[package]]
-name = "subject-derive"
+name = "pedronauck-subject-derive"
 release = true
 publish = true
 

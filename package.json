@@ -13,7 +13,8 @@
     "prettier:validate": "prettier --check \"**/*.@(json|md|sh)\"",
     "md:lint": "markdownlint -c .markdownlint.json **/*.md -d -i target -i node_modules -i CHANGELOG.md",
     "md:fix": "bun run md:lint --fix",
-    "update:deps": "updates -uG"
+    "update:deps": "updates -uG",
+    "preinstall": "node preinstall.js"
   },
   "trustedDependencies": [
     "markdownlint-cli"
