@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.0.27](https://github.com/FuelLabs/data-systems/compare/v0.0.26...v0.0.27) - 2025-03-11
+
+### ⭐ Features
+
+- _(repo)_: Repo test ([#422](https://github.com/FuelLabs/data-systems/pull/422)) ([fac3af6](https://github.com/FuelLabs/data-systems/commit/fac3af66f2a95da16be0a5865743cabffb88066a) @pedronauck)
+
+
+### 💪🏼 Contributors
+
+- @pedronauck
+- @0xterminator
+
+Want to contribute? Check out our [CONTRIBUTING.md](./CONTRIBUTING.md) guide!
+
+---
+
 ## [0.0.26](https://github.com/FuelLabs/data-systems/compare/v0.0.25...v0.0.26) - 2025-03-11
 
 ### ⭐ Features

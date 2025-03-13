@@ -1,15 +1,15 @@
 [workspace]
 default-members = ["crates/fuel-streams"]
 members = [
-  "benches/*",
-  "crates/*",
-  "crates/subject/subject-derive",
-  "examples",
-  "scripts/generate-api-keys",
-  "scripts/subjects-schema",
-  "scripts/update-db",
-  "services/*",
-  "tests",
+    "benches/*",
+    "crates/*",
+    "crates/subject/subject-derive",
+    "examples",
+    "scripts/generate-api-keys",
+    "scripts/subjects-schema",
+    "scripts/update-db",
+    "services/*",
+    "tests",
 ]
 resolver = "2"
 
@@ -21,7 +21,7 @@ keywords = ["blockchain", "cryptocurrencies", "data-stream"]
 license = "Apache-2.0"
 repository = "https://github.com/fuellabs/data-systems"
 rust-version = "1.84.0"
-version = "0.0.26"
+version = "0.0.27"
 
 [workspace.dependencies]
 actix = "0.13.5"
@@ -54,11 +54,11 @@ serde_json = "1.0.140"
 serde_urlencoded = "0.7.1"
 sha2 = "0.10.8"
 sqlx = { version = "0.8.3", default-features = false, features = [
-  "chrono",
-  "macros",
-  "postgres",
-  "runtime-tokio",
-  "tls-native-tls",
+    "chrono",
+    "macros",
+    "postgres",
+    "runtime-tokio",
+    "tls-native-tls",
 ] }
 strum = { version = "0.27.1", features = ["derive"] }
 strum_macros = "0.27.1"
@@ -66,33 +66,33 @@ test-case = "3.3.1"
 thiserror = "2.0.12"
 time = { version = "0.3", features = ["serde"] }
 tokio = { version = "1.44.1", features = [
-  "io-util",
-  "macros",
-  "rt-multi-thread",
-  "test-util",
+    "io-util",
+    "macros",
+    "rt-multi-thread",
+    "test-util",
 ] }
 tokio-stream = "0.1.17"
 tracing = "0.1.41"
 tracing-actix-web = "0.7.16"
 tracing-subscriber = { version = "0.3.19", features = [
-  "local-time",
-  "env-filter",
+    "local-time",
+    "env-filter",
 ] }
 utoipa = { version = "5.3.1", features = ["actix_extras", "chrono", "time"] }
 
 # Fuel Core dependencies
 fuel-core = { version = "0.41.9", default-features = false, features = [
-  "p2p",
-  "relayer",
-  "rocksdb",
+    "p2p",
+    "relayer",
+    "rocksdb",
 ] }
 fuel-core-bin = { version = "0.41.9", default-features = false, features = [
-  "p2p",
-  "relayer",
-  "rocksdb",
+    "p2p",
+    "relayer",
+    "rocksdb",
 ] }
 fuel-core-client = { version = "0.41.9", default-features = false, features = [
-  "std",
+    "std",
 ] }
 fuel-core-importer = { version = "0.41.9" }
 fuel-core-poa = { version = "0.41.9", default-features = false }
@@ -100,24 +100,24 @@ fuel-core-services = { version = "0.41.9", default-features = false }
 fuel-core-storage = { version = "0.41.9" }
 fuel-core-txpool = { version = "0.41.9" }
 fuel-core-types = { version = "0.41.9", default-features = false, features = [
-  "serde",
-  "std",
+    "serde",
+    "std",
 ] }
 fuel-tx = { version = "0.60.0" }
 fuel-vm = { version = "0.60.0" }
 
 # Internal dependencies
-fuel-data-parser = { version = "0.0.26", path = "crates/data-parser" }
-fuel-message-broker = { version = "0.0.26", path = "crates/message-broker" }
-fuel-streams = { version = "0.0.26", path = "crates/fuel-streams" }
-fuel-streams-core = { version = "0.0.26", path = "crates/core" }
-fuel-streams-domains = { version = "0.0.26", path = "crates/domains" }
-fuel-streams-store = { version = "0.0.26", path = "crates/store" }
-fuel-streams-subject = { version = "0.0.26", path = "crates/subject" }
+fuel-data-parser = { version = "0.0.27", path = "crates/data-parser" }
+fuel-message-broker = { version = "0.0.27", path = "crates/message-broker" }
+fuel-streams = { version = "0.0.27", path = "crates/fuel-streams" }
+fuel-streams-core = { version = "0.0.27", path = "crates/core" }
+fuel-streams-domains = { version = "0.0.27", path = "crates/domains" }
+fuel-streams-store = { version = "0.0.27", path = "crates/store" }
+fuel-streams-subject = { version = "0.0.27", path = "crates/subject" }
 fuel-streams-test = { version = "0.0.22", path = "crates/test" }
-fuel-streams-types = { version = "0.0.26", path = "crates/types" }
-fuel-web-utils = { version = "0.0.26", path = "crates/web-utils" }
-subject-derive = { version = "0.0.26", path = "crates/subject/subject-derive" }
+fuel-streams-types = { version = "0.0.27", path = "crates/types" }
+fuel-web-utils = { version = "0.0.27", path = "crates/web-utils" }
+subject-derive = { version = "0.0.27", path = "crates/subject/subject-derive" }
 
 # Workspace projects
 [workspace.metadata.cargo-machete]
