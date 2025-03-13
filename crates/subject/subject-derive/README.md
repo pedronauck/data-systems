@@ -5,7 +5,7 @@
     </a>
     <h3 align="center">Subject Derive Macro</h3>
     <p align="center">
-        A derive macro for implementing the Subject trait in the fuel-streams ecosystem
+        A derive macro for implementing the Subject trait in the pedronauck-streams ecosystem
     </p>
     <p align="center">
         <a href="https://github.com/FuelLabs/data-systems/actions/workflows/ci.yaml" style="text-decoration: none;">
@@ -35,6 +35,6 @@
 
 # Subject Derive Macro
 
-This is a macro that is part of the [fuel-streams-subject](https://github.com/fuellabs/data-systems/tree/main/crates/fuel-streams-subject) crate. It provides functionality for deriving the `Subject` trait on structs.
+This is a macro that is part of the [pedronauck-streams-subject](https://github.com/fuellabs/data-systems/tree/main/crates/pedronauck-streams-subject) crate. It provides functionality for deriving the `Subject` trait on structs.
 
-For more information and usage examples, please refer to the [fuel-streams-subject documentation](https://docs.rs/fuel-streams-subject/).
+For more information and usage examples, please refer to the [pedronauck-streams-subject documentation](https://docs.rs/pedronauck-streams-subject/).

@@ -1,5 +1,5 @@
 use async_trait::async_trait;
-use fuel_streams_store::record::{PacketBuilder, Record, RecordPacket};
+use pedronauck_streams_store::record::{PacketBuilder, Record, RecordPacket};
 
 use super::{Block, BlocksSubject};
 use crate::MsgPayload;

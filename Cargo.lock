@@ -2138,8 +2138,8 @@ name = "data-parser"
 version = "0.0.27"
 dependencies = [
  "criterion",
- "fuel-data-parser",
- "fuel-streams-domains",
+ "pedronauck-data-parser",
+ "pedronauck-streams-domains",
  "rand 0.9.0",
  "strum 0.27.1",
  "tokio",
@@ -3641,25 +3641,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "fuel-data-parser"
-version = "0.0.27"
-dependencies = [
- "async-compression",
- "async-trait",
- "bincode",
- "lazy_static",
- "paste",
- "postcard",
- "pretty_assertions",
- "serde",
- "serde_json",
- "strum 0.27.1",
- "strum_macros 0.27.1",
- "thiserror 2.0.12",
- "tokio",
-]
-
-[[package]]
 name = "fuel-derive"
 version = "0.56.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3751,24 +3732,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "fuel-message-broker"
-version = "0.0.27"
-dependencies = [
- "async-nats",
- "async-trait",
- "bytes",
- "dotenvy",
- "futures",
- "pretty_assertions",
- "rand 0.9.0",
- "serde",
- "serde_json",
- "thiserror 2.0.12",
- "tokio",
- "tracing",
-]
-
-[[package]]
 name = "fuel-sequencer-proto"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3797,174 +3760,6 @@ name = "fuel-storage"
 version = "0.60.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8425dc32f86e2d6082126ee34998a9556306c6a79d95b85a62a05b439ff9bb19"
-
-[[package]]
-name = "fuel-streams"
-version = "0.0.27"
-dependencies = [
- "anyhow",
- "fuel-streams-core",
- "fuel-streams-store",
- "futures",
- "reqwest 0.12.12",
- "serde",
- "serde_json",
- "thiserror 2.0.12",
- "tokio",
- "tokio-tungstenite 0.26.2",
- "url",
-]
-
-[[package]]
-name = "fuel-streams-core"
-version = "0.0.27"
-dependencies = [
- "anyhow",
- "async-nats",
- "async-stream",
- "dotenvy",
- "fuel-core",
- "fuel-message-broker",
- "fuel-streams-domains",
- "fuel-streams-store",
- "fuel-streams-subject",
- "fuel-streams-types",
- "fuel-tx 0.60.0",
- "fuel-vm 0.60.0",
- "fuel-web-utils",
- "futures",
- "pretty_assertions",
- "serde",
- "serde_json",
- "thiserror 2.0.12",
- "tokio",
- "tracing",
- "utoipa",
-]
-
-[[package]]
-name = "fuel-streams-domains"
-version = "0.0.27"
-dependencies = [
- "actix-web",
- "async-trait",
- "chrono",
- "fuel-core",
- "fuel-core-types 0.41.9",
- "fuel-streams-store",
- "fuel-streams-subject",
- "fuel-streams-types",
- "fuel-tx 0.60.0",
- "fuel-vm 0.60.0",
- "futures",
- "pretty_assertions",
- "rayon",
- "sea-query",
- "serde",
- "serde_json",
- "serde_urlencoded",
- "serde_with",
- "sqlx",
- "test-case",
- "thiserror 2.0.12",
- "tokio",
- "utoipa",
-]
-
-[[package]]
-name = "fuel-streams-examples"
-version = "0.0.27"
-dependencies = [
- "anyhow",
- "fuel-streams",
- "futures",
- "tokio",
-]
-
-[[package]]
-name = "fuel-streams-store"
-version = "0.0.27"
-dependencies = [
- "async-trait",
- "dotenvy",
- "fuel-data-parser",
- "fuel-streams-subject",
- "fuel-streams-types",
- "serde",
- "sqlx",
- "test-case",
- "thiserror 2.0.12",
- "tokio",
- "tracing",
- "utoipa",
-]
-
-[[package]]
-name = "fuel-streams-subject"
-version = "0.0.27"
-dependencies = [
- "downcast-rs",
- "indexmap 2.8.0",
- "pretty_assertions",
- "serde",
- "serde_json",
- "subject-derive",
- "test-case",
- "thiserror 2.0.12",
-]
-
-[[package]]
-name = "fuel-streams-test"
-version = "0.0.27"
-dependencies = [
- "anyhow",
- "fuel-core",
- "fuel-core-client",
- "fuel-core-types 0.41.9",
- "fuel-message-broker",
- "fuel-streams-core",
- "fuel-streams-domains",
- "fuel-streams-store",
- "fuel-streams-subject",
- "fuel-streams-types",
- "fuel-web-utils",
- "futures",
- "mockall 0.13.1",
- "pretty_assertions",
- "rand 0.9.0",
- "serde_json",
- "sv-consumer",
- "tokio",
-]
-
-[[package]]
-name = "fuel-streams-types"
-version = "0.0.27"
-dependencies = [
- "anyhow",
- "async-trait",
- "chrono",
- "fuel-core",
- "fuel-core-bin",
- "fuel-core-client",
- "fuel-core-importer",
- "fuel-core-services",
- "fuel-core-storage",
- "fuel-core-types 0.41.9",
- "fuel-tx 0.60.0",
- "fuel-vm 0.60.0",
- "hex",
- "pretty_assertions",
- "rand 0.9.0",
- "serde",
- "serde_json",
- "serde_urlencoded",
- "sqlx",
- "thiserror 2.0.12",
- "tokio",
- "tracing",
- "utoipa",
-]
 
 [[package]]
 name = "fuel-tx"
@@ -4164,51 +3959,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "fuel-web-utils"
-version = "0.0.27"
-dependencies = [
- "actix-cors",
- "actix-server",
- "actix-service",
- "actix-web",
- "anyhow",
- "async-trait",
- "chrono",
- "dashmap",
- "derive_more 1.0.0",
- "displaydoc",
- "dotenvy",
- "elasticsearch",
- "fuel-data-parser",
- "fuel-message-broker",
- "fuel-streams-store",
- "fuel-streams-types",
- "futures",
- "futures-util",
- "mockall 0.13.1",
- "parking_lot",
- "pretty_assertions",
- "prometheus",
- "rand 0.9.0",
- "rust_decimal",
- "serde",
- "serde_json",
- "serde_prometheus",
- "sqlx",
- "strum 0.27.1",
- "sysinfo",
- "thiserror 2.0.12",
- "time",
- "tokio",
- "tokio-util",
- "tracing",
- "tracing-actix-web",
- "tracing-subscriber",
- "url",
- "urlencoding",
-]
-
-[[package]]
 name = "funty"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4384,9 +4134,9 @@ dependencies = [
  "clap",
  "displaydoc",
  "dotenvy",
- "fuel-data-parser",
- "fuel-streams-store",
- "fuel-web-utils",
+ "pedronauck-data-parser",
+ "pedronauck-streams-store",
+ "pedronauck-web-utils",
  "sqlx",
  "strum 0.27.1",
  "thiserror 2.0.12",
@@ -6210,9 +5960,9 @@ dependencies = [
  "anyhow",
  "chrono",
  "clap",
- "fuel-streams",
- "fuel-streams-core",
  "futures",
+ "pedronauck-streams",
+ "pedronauck-streams-core",
  "statrs",
  "tokio",
 ]
@@ -7125,6 +6875,256 @@ checksum = "f8ed6a7761f76e3b9f92dfb0a60a6a6477c61024b775147ff0973a02653abaf2"
 dependencies = [
  "digest 0.10.7",
  "hmac 0.12.1",
+]
+
+[[package]]
+name = "pedronauck-data-parser"
+version = "0.0.27"
+dependencies = [
+ "async-compression",
+ "async-trait",
+ "bincode",
+ "lazy_static",
+ "paste",
+ "postcard",
+ "pretty_assertions",
+ "serde",
+ "serde_json",
+ "strum 0.27.1",
+ "strum_macros 0.27.1",
+ "thiserror 2.0.12",
+ "tokio",
+]
+
+[[package]]
+name = "pedronauck-message-broker"
+version = "0.0.27"
+dependencies = [
+ "async-nats",
+ "async-trait",
+ "bytes",
+ "dotenvy",
+ "futures",
+ "pretty_assertions",
+ "rand 0.9.0",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.12",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
+name = "pedronauck-streams"
+version = "0.0.27"
+dependencies = [
+ "anyhow",
+ "futures",
+ "pedronauck-streams-core",
+ "pedronauck-streams-store",
+ "reqwest 0.12.12",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.12",
+ "tokio",
+ "tokio-tungstenite 0.26.2",
+ "url",
+]
+
+[[package]]
+name = "pedronauck-streams-core"
+version = "0.0.27"
+dependencies = [
+ "anyhow",
+ "async-nats",
+ "async-stream",
+ "dotenvy",
+ "fuel-core",
+ "fuel-tx 0.60.0",
+ "fuel-vm 0.60.0",
+ "futures",
+ "pedronauck-message-broker",
+ "pedronauck-streams-domains",
+ "pedronauck-streams-store",
+ "pedronauck-streams-subject",
+ "pedronauck-streams-types",
+ "pedronauck-web-utils",
+ "pretty_assertions",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.12",
+ "tokio",
+ "tracing",
+ "utoipa",
+]
+
+[[package]]
+name = "pedronauck-streams-domains"
+version = "0.0.27"
+dependencies = [
+ "actix-web",
+ "async-trait",
+ "chrono",
+ "fuel-core",
+ "fuel-core-types 0.41.9",
+ "fuel-tx 0.60.0",
+ "fuel-vm 0.60.0",
+ "futures",
+ "pedronauck-streams-store",
+ "pedronauck-streams-subject",
+ "pedronauck-streams-types",
+ "pretty_assertions",
+ "rayon",
+ "sea-query",
+ "serde",
+ "serde_json",
+ "serde_urlencoded",
+ "serde_with",
+ "sqlx",
+ "test-case",
+ "thiserror 2.0.12",
+ "tokio",
+ "utoipa",
+]
+
+[[package]]
+name = "pedronauck-streams-examples"
+version = "0.0.27"
+dependencies = [
+ "anyhow",
+ "futures",
+ "pedronauck-streams",
+ "tokio",
+]
+
+[[package]]
+name = "pedronauck-streams-store"
+version = "0.0.27"
+dependencies = [
+ "async-trait",
+ "dotenvy",
+ "pedronauck-data-parser",
+ "pedronauck-streams-subject",
+ "pedronauck-streams-types",
+ "serde",
+ "sqlx",
+ "test-case",
+ "thiserror 2.0.12",
+ "tokio",
+ "tracing",
+ "utoipa",
+]
+
+[[package]]
+name = "pedronauck-streams-subject"
+version = "0.0.27"
+dependencies = [
+ "downcast-rs",
+ "indexmap 2.8.0",
+ "pretty_assertions",
+ "serde",
+ "serde_json",
+ "subject-derive",
+ "test-case",
+ "thiserror 2.0.12",
+]
+
+[[package]]
+name = "pedronauck-streams-test"
+version = "0.0.27"
+dependencies = [
+ "anyhow",
+ "fuel-core",
+ "fuel-core-client",
+ "fuel-core-types 0.41.9",
+ "futures",
+ "mockall 0.13.1",
+ "pedronauck-message-broker",
+ "pedronauck-streams-core",
+ "pedronauck-streams-domains",
+ "pedronauck-streams-store",
+ "pedronauck-streams-subject",
+ "pedronauck-streams-types",
+ "pedronauck-web-utils",
+ "pretty_assertions",
+ "rand 0.9.0",
+ "serde_json",
+ "sv-consumer",
+ "tokio",
+]
+
+[[package]]
+name = "pedronauck-streams-types"
+version = "0.0.27"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "chrono",
+ "fuel-core",
+ "fuel-core-bin",
+ "fuel-core-client",
+ "fuel-core-importer",
+ "fuel-core-services",
+ "fuel-core-storage",
+ "fuel-core-types 0.41.9",
+ "fuel-tx 0.60.0",
+ "fuel-vm 0.60.0",
+ "hex",
+ "pretty_assertions",
+ "rand 0.9.0",
+ "serde",
+ "serde_json",
+ "serde_urlencoded",
+ "sqlx",
+ "thiserror 2.0.12",
+ "tokio",
+ "tracing",
+ "utoipa",
+]
+
+[[package]]
+name = "pedronauck-web-utils"
+version = "0.0.27"
+dependencies = [
+ "actix-cors",
+ "actix-server",
+ "actix-service",
+ "actix-web",
+ "anyhow",
+ "async-trait",
+ "chrono",
+ "dashmap",
+ "derive_more 1.0.0",
+ "displaydoc",
+ "dotenvy",
+ "elasticsearch",
+ "futures",
+ "futures-util",
+ "mockall 0.13.1",
+ "parking_lot",
+ "pedronauck-data-parser",
+ "pedronauck-message-broker",
+ "pedronauck-streams-store",
+ "pedronauck-streams-types",
+ "pretty_assertions",
+ "prometheus",
+ "rand 0.9.0",
+ "rust_decimal",
+ "serde",
+ "serde_json",
+ "serde_prometheus",
+ "sqlx",
+ "strum 0.27.1",
+ "sysinfo",
+ "thiserror 2.0.12",
+ "time",
+ "tokio",
+ "tokio-util",
+ "tracing",
+ "tracing-actix-web",
+ "tracing-subscriber",
+ "url",
+ "urlencoding",
 ]
 
 [[package]]
@@ -9626,9 +9626,9 @@ dependencies = [
 name = "subjects-schema"
 version = "0.0.27"
 dependencies = [
- "fuel-streams-domains",
- "fuel-streams-subject",
  "indexmap 2.8.0",
+ "pedronauck-streams-domains",
+ "pedronauck-streams-subject",
  "serde_json",
 ]
 
@@ -9676,15 +9676,15 @@ dependencies = [
  "clap",
  "displaydoc",
  "dotenvy",
- "fuel-data-parser",
- "fuel-streams-core",
- "fuel-streams-domains",
- "fuel-streams-store",
  "fuel-tx 0.60.0",
  "fuel-vm 0.60.0",
- "fuel-web-utils",
  "num_cpus",
  "openssl",
+ "pedronauck-data-parser",
+ "pedronauck-streams-core",
+ "pedronauck-streams-domains",
+ "pedronauck-streams-store",
+ "pedronauck-web-utils",
  "prometheus",
  "serde",
  "serde_json",
@@ -9709,15 +9709,15 @@ dependencies = [
  "clap",
  "dotenvy",
  "fuel-core",
- "fuel-message-broker",
- "fuel-streams-core",
- "fuel-streams-domains",
- "fuel-streams-store",
  "fuel-tx 0.60.0",
  "fuel-vm 0.60.0",
- "fuel-web-utils",
  "futures",
  "openssl",
+ "pedronauck-message-broker",
+ "pedronauck-streams-core",
+ "pedronauck-streams-domains",
+ "pedronauck-streams-store",
+ "pedronauck-web-utils",
  "prometheus",
  "serde_json",
  "sqlx",
@@ -9737,14 +9737,14 @@ dependencies = [
  "fuel-core",
  "fuel-core-bin",
  "fuel-core-types 0.41.9",
- "fuel-message-broker",
- "fuel-streams-core",
- "fuel-streams-domains",
- "fuel-streams-store",
  "fuel-tx 0.60.0",
  "fuel-vm 0.60.0",
- "fuel-web-utils",
  "openssl",
+ "pedronauck-message-broker",
+ "pedronauck-streams-core",
+ "pedronauck-streams-domains",
+ "pedronauck-streams-store",
+ "pedronauck-web-utils",
  "prometheus",
  "serde",
  "serde_json",
@@ -9768,16 +9768,16 @@ dependencies = [
  "dashmap",
  "displaydoc",
  "dotenvy",
- "fuel-data-parser",
- "fuel-message-broker",
- "fuel-streams-core",
- "fuel-streams-domains",
- "fuel-streams-store",
  "fuel-tx 0.60.0",
  "fuel-vm 0.60.0",
- "fuel-web-utils",
  "futures",
  "openssl",
+ "pedronauck-data-parser",
+ "pedronauck-message-broker",
+ "pedronauck-streams-core",
+ "pedronauck-streams-domains",
+ "pedronauck-streams-store",
+ "pedronauck-web-utils",
  "prometheus",
  "serde",
  "serde_json",
@@ -10797,9 +10797,9 @@ version = "0.0.27"
 dependencies = [
  "anyhow",
  "dotenvy",
- "fuel-streams-domains",
- "fuel-streams-store",
- "fuel-streams-types",
+ "pedronauck-streams-domains",
+ "pedronauck-streams-store",
+ "pedronauck-streams-types",
  "rayon",
  "sqlx",
  "tokio",

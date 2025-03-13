@@ -1,13 +1,13 @@
-use fuel_streams_core::{subjects::*, types::Block};
-use fuel_streams_domains::blocks::subjects::BlocksSubject;
-use fuel_streams_store::record::QueryOptions;
-use fuel_streams_test::{
+use pedronauck_streams_core::{subjects::*, types::Block};
+use pedronauck_streams_test::{
     close_db,
     create_multiple_records,
     create_random_db_name,
     insert_records,
     setup_store,
 };
+use pedronauck_streams_domains::blocks::subjects::BlocksSubject;
+use pedronauck_streams_store::record::QueryOptions;
 use pretty_assertions::assert_eq;
 
 #[tokio::test]

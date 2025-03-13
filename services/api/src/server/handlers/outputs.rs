@@ -1,16 +1,16 @@
 use actix_web::{web, HttpRequest, HttpResponse};
-use fuel_streams_core::types::{
+use pedronauck_streams_core::types::{
     Address,
     AssetId,
     BlockHeight,
     ContractId,
     TxId,
 };
-use fuel_streams_domains::{
+use pedronauck_streams_domains::{
     outputs::{queryable::OutputsQuery, OutputType},
     queryable::{Queryable, ValidatedQuery},
 };
-use fuel_web_utils::api_key::ApiKey;
+use pedronauck_web_utils::api_key::ApiKey;
 
 use super::{Error, GetDataResponse};
 use crate::server::state::ServerState;

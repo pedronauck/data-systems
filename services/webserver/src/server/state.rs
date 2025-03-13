@@ -4,10 +4,10 @@ use std::{
 };
 
 use async_trait::async_trait;
-use fuel_message_broker::NatsMessageBroker;
-use fuel_streams_core::FuelStreams;
-use fuel_streams_store::db::{Db, DbConnectionOpts};
-use fuel_web_utils::{
+use pedronauck_message_broker::NatsMessageBroker;
+use pedronauck_streams_core::FuelStreams;
+use pedronauck_streams_store::db::{Db, DbConnectionOpts};
+use pedronauck_web_utils::{
     api_key::{ApiKeysManager, KeyStorage},
     server::{middlewares::password::PasswordManager, state::StateProvider},
     telemetry::Telemetry,
@@ -25,7 +25,7 @@ pub struct ServerState {
     pub db: Arc<Db>,
     pub start_time: Instant,
     pub msg_broker: Arc<NatsMessageBroker>,
-    pub fuel_streams: Arc<FuelStreams>,
+    pub pedronauck_streams: Arc<FuelStreams>,
     pub telemetry: Arc<Telemetry<Metrics>>,
     pub api_keys_manager: Arc<ApiKeysManager>,
     pub password_manager: Arc<PasswordManager>,
@@ -42,7 +42,7 @@ impl ServerState {
         })
         .await?;
 
-        let fuel_streams = FuelStreams::new(&msg_broker, &db).await.arc();
+        let pedronauck_streams = FuelStreams::new(&msg_broker, &db).await.arc();
         let metrics = Metrics::new(None)?;
         let telemetry = Telemetry::new(Some(metrics)).await?;
         telemetry.start().await?;
@@ -67,7 +67,7 @@ impl ServerState {
             db,
             start_time: Instant::now(),
             msg_broker,
-            fuel_streams,
+            pedronauck_streams,
             telemetry,
             api_keys_manager,
             password_manager,

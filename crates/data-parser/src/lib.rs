@@ -86,7 +86,7 @@ pub trait DataEncoder:
 /// # Examples
 ///
 /// ```
-/// use fuel_data_parser::*;
+/// use pedronauck_data_parser::*;
 /// use std::sync::Arc;
 ///
 /// #[derive(serde::Serialize, serde::Deserialize, Debug, Clone, PartialEq)]
@@ -123,7 +123,7 @@ impl Default for DataParser {
     /// # Examples
     ///
     /// ```
-    /// use fuel_data_parser::{DataParser, SerializationType};
+    /// use pedronauck_data_parser::{DataParser, SerializationType};
     ///
     /// let parser = DataParser::default();
     /// assert!(matches!(parser.serialization_type, SerializationType::Json));
@@ -150,7 +150,7 @@ impl DataParser {
     /// # Examples
     ///
     /// ```
-    /// use fuel_data_parser::*;
+    /// use pedronauck_data_parser::*;
     /// use std::sync::Arc;
     ///
     /// let parser = DataParser::default()
@@ -177,7 +177,7 @@ impl DataParser {
     /// # Examples
     ///
     /// ```
-    /// use fuel_data_parser::*;
+    /// use pedronauck_data_parser::*;
     ///
     /// let parser = DataParser::default()
     ///     .with_serialization_type(SerializationType::Postcard);
@@ -204,7 +204,7 @@ impl DataParser {
     /// # Examples
     ///
     /// ```
-    /// use fuel_data_parser::*;
+    /// use pedronauck_data_parser::*;
     ///
     /// #[derive(serde::Serialize, serde::Deserialize, Debug, Clone)]
     /// struct TestData {
@@ -310,7 +310,7 @@ impl DataParser {
     /// # Examples
     ///
     /// ```
-    /// use fuel_data_parser::*;
+    /// use pedronauck_data_parser::*;
     ///
     /// #[derive(serde::Serialize, serde::Deserialize, Debug, Clone, PartialEq)]
     /// struct TestData {

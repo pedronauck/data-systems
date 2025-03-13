@@ -1,5 +1,5 @@
 [package]
-name = "fuel-streams-domains"
+name = "pedronauck-streams-domains"
 description = "Domains definitions for fuel streams"
 authors.workspace = true
 edition.workspace = true
@@ -16,12 +16,12 @@ async-trait.workspace = true
 chrono.workspace = true
 fuel-core.workspace = true
 fuel-core-types.workspace = true
-fuel-streams-store.workspace = true
-fuel-streams-subject.workspace = true
-fuel-streams-types.workspace = true
 fuel-tx.workspace = true
 fuel-vm.workspace = true
 futures.workspace = true
+pedronauck-streams-store.workspace = true
+pedronauck-streams-subject.workspace = true
+pedronauck-streams-types.workspace = true
 rayon.workspace = true
 sea-query = "0.32.2"
 serde.workspace = true
@@ -42,6 +42,6 @@ default = []
 test-helpers = [
   "fuel-core-types/test-helpers",
   "fuel-core/test-helpers",
-  "fuel-streams-store/test-helpers",
-  "fuel-streams-types/test-helpers",
+  "pedronauck-streams-store/test-helpers",
+  "pedronauck-streams-types/test-helpers",
 ]

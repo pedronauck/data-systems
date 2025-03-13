@@ -1,10 +1,10 @@
 use std::sync::Arc;
 
 use clap::Parser;
-use fuel_message_broker::NatsMessageBroker;
-use fuel_streams_core::FuelStreams;
-use fuel_streams_store::db::{Db, DbConnectionOpts};
-use fuel_web_utils::{shutdown::ShutdownController, telemetry::Telemetry};
+use pedronauck_message_broker::NatsMessageBroker;
+use pedronauck_streams_core::FuelStreams;
+use pedronauck_streams_store::db::{Db, DbConnectionOpts};
+use pedronauck_web_utils::{shutdown::ShutdownController, telemetry::Telemetry};
 use sv_consumer::{
     cli::Cli,
     errors::ConsumerError,
@@ -15,7 +15,7 @@ use sv_consumer::{
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    fuel_web_utils::tracing::init_tracing();
+    pedronauck_web_utils::tracing::init_tracing();
     if let Err(err) = dotenvy::dotenv() {
         tracing::warn!("File .env not found: {:?}", err);
     }
@@ -30,11 +30,11 @@ async fn main() -> anyhow::Result<()> {
     let metrics = Metrics::new(None)?;
     let telemetry = Telemetry::new(Some(metrics)).await?;
     telemetry.start().await?;
-    let fuel_streams = FuelStreams::new(&message_broker, &db).await.arc();
+    let pedronauck_streams = FuelStreams::new(&message_broker, &db).await.arc();
     let block_executor = BlockExecutor::new(
         db,
         &message_broker,
-        &fuel_streams,
+        &pedronauck_streams,
         Arc::clone(&telemetry),
     );
     let server = Server::new(cli.port, message_broker, Arc::clone(&telemetry));

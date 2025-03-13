@@ -51,7 +51,7 @@ pub fn expanded<'a>(
     let query_all = crate::attrs::subject_attr("query_all", attrs);
     let id = crate::attrs::subject_attr("id", attrs);
     let entity = crate::attrs::subject_attr("entity", attrs);
-    let crate_path = quote!(fuel_streams_subject::subject);
+    let crate_path = quote!(pedronauck_streams_subject::subject);
 
     let custom_where = if let Some(extra) =
         SubjectAttrs::from_attributes(attrs).get("custom_where")

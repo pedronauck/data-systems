@@ -14,18 +14,18 @@
         <a href="https://codecov.io/gh/FuelLabs/data-systems" style="text-decoration: none;">
             <img src="https://codecov.io/gh/FuelLabs/data-systems/graph/badge.svg?token=1zna00scwj" alt="Coverage">
         </a>
-        <a href="https://crates.io/crates/fuel-streams-core" style="text-decoration: none;">
-            <img alt="Crates.io MSRV" src="https://img.shields.io/crates/msrv/fuel-streams-core">
+        <a href="https://crates.io/crates/pedronauck-streams-core" style="text-decoration: none;">
+            <img alt="Crates.io MSRV" src="https://img.shields.io/crates/msrv/pedronauck-streams-core">
         </a>
-        <a href="https://crates.io/crates/fuel-streams-core" style="text-decoration: none;">
-            <img src="https://img.shields.io/crates/v/fuel-streams-core?label=latest" alt="crates.io">
+        <a href="https://crates.io/crates/pedronauck-streams-core" style="text-decoration: none;">
+            <img src="https://img.shields.io/crates/v/pedronauck-streams-core?label=latest" alt="crates.io">
         </a>
-        <a href="https://docs.rs/fuel-streams-core/" style="text-decoration: none;">
-            <img src="https://docs.rs/fuel-streams-core/badge.svg" alt="docs">
+        <a href="https://docs.rs/pedronauck-streams-core/" style="text-decoration: none;">
+            <img src="https://docs.rs/pedronauck-streams-core/badge.svg" alt="docs">
         </a>
     </p>
     <p align="center">
-        <a href="https://docs.rs/fuel-streams-core">📚 Documentation</a>
+        <a href="https://docs.rs/pedronauck-streams-core">📚 Documentation</a>
         <span>&nbsp;</span>
         <a href="https://github.com/fuellabs/data-systems/issues/new?labels=bug&template=bug-report---.md">🐛 Report Bug</a>
         <span>&nbsp;</span>
@@ -46,7 +46,7 @@ Add this dependency to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-fuel-streams-core = "*"
+pedronauck-streams-core = "*"
 ```
 
 ## 🚀 Usage
@@ -54,10 +54,10 @@ fuel-streams-core = "*"
 Here's a simple example to get you started with Fuel Streams Core:
 
 ```rust,no_run
-use fuel_streams_core::prelude::*;
-use fuel_streams_store::db::*;
-use fuel_web_utils::api_key::*;
-use fuel_message_broker::*;
+use pedronauck_streams_core::prelude::*;
+use pedronauck_streams_store::db::*;
+use pedronauck_web_utils::api_key::*;
+use pedronauck_message_broker::*;
 use futures::StreamExt;
 
 #[tokio::main]

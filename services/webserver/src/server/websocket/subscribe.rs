@@ -1,7 +1,8 @@
 use std::sync::Arc;
 
 use actix_ws::Session;
-use fuel_streams_core::{
+use futures::stream::{SelectAll, StreamExt};
+use pedronauck_streams_core::{
     prelude::IntoSubject,
     server::{ServerResponse, Subscription},
     types::{ServerRequest, StreamResponse},
@@ -9,10 +10,9 @@ use fuel_streams_core::{
     FuelStreams,
     StreamError,
 };
-use fuel_streams_domains::Subjects;
-use fuel_streams_store::record::RecordEntity;
-use fuel_web_utils::api_key::{ApiKey, ApiKeyRole};
-use futures::stream::{SelectAll, StreamExt};
+use pedronauck_streams_domains::Subjects;
+use pedronauck_streams_store::record::RecordEntity;
+use pedronauck_web_utils::api_key::{ApiKey, ApiKeyRole};
 use smallvec::SmallVec;
 
 use crate::server::{errors::WebsocketError, websocket::WsSession};

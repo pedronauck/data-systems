@@ -4,8 +4,8 @@ use std::{
 };
 
 use chrono::{DateTime, Duration, Utc};
-use fuel_streams_subject::subject::*;
-use fuel_streams_types::{BlockTimestamp, *};
+use pedronauck_streams_subject::subject::*;
+use pedronauck_streams_types::{BlockTimestamp, *};
 use sea_query::{Condition, Expr, Iden};
 use serde::{Deserialize, Serialize};
 
@@ -219,7 +219,7 @@ impl HasPagination for BlocksQuery {
 #[cfg(test)]
 mod test {
     use chrono::Utc;
-    use fuel_streams_types::{Address, BlockHeight, BlockTimestamp};
+    use pedronauck_streams_types::{Address, BlockHeight, BlockTimestamp};
     use pretty_assertions::assert_eq;
 
     use crate::{

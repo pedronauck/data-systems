@@ -1,4 +1,4 @@
-use fuel_streams_types::{fuel_core::*, primitives::*};
+use pedronauck_streams_types::{fuel_core::*, primitives::*};
 use serde::{Deserialize, Serialize};
 
 // Output enum

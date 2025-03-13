@@ -1,4 +1,4 @@
-use fuel_streams::prelude::*;
+use pedronauck_streams::prelude::*;
 use futures::StreamExt;
 
 const TX_ID: &str =

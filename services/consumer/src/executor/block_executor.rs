@@ -1,21 +1,21 @@
 use std::sync::Arc;
 
-use fuel_message_broker::{Message, NatsMessageBroker, NatsQueue};
-use fuel_streams_core::{
+use futures::{future::try_join_all, StreamExt};
+use pedronauck_message_broker::{Message, NatsMessageBroker, NatsQueue};
+use pedronauck_streams_core::{
     types::{Block, BlockTimestamp, Transaction},
     FuelStreams,
 };
-use fuel_streams_domains::MsgPayload;
-use fuel_streams_store::{
+use pedronauck_streams_domains::MsgPayload;
+use pedronauck_streams_store::{
     db::Db,
     record::{DataEncoder, PacketBuilder, RecordPacket},
     store::update_block_propagation_ms,
 };
-use fuel_web_utils::{
+use pedronauck_web_utils::{
     shutdown::shutdown_broker_with_timeout,
     telemetry::Telemetry,
 };
-use futures::{future::try_join_all, StreamExt};
 use tokio::{
     sync::Semaphore,
     task::{JoinError, JoinSet},
@@ -40,7 +40,7 @@ enum ProcessResult {
 pub struct BlockExecutor {
     db: Arc<Db>,
     message_broker: Arc<NatsMessageBroker>,
-    fuel_streams: Arc<FuelStreams>,
+    pedronauck_streams: Arc<FuelStreams>,
     fuel_stores: Arc<FuelStores>,
     semaphore: Arc<Semaphore>,
     telemetry: Arc<Telemetry<Metrics>>,
@@ -50,7 +50,7 @@ impl BlockExecutor {
     pub fn new(
         db: Arc<Db>,
         message_broker: &Arc<NatsMessageBroker>,
-        fuel_streams: &Arc<FuelStreams>,
+        pedronauck_streams: &Arc<FuelStreams>,
         telemetry: Arc<Telemetry<Metrics>>,
     ) -> Self {
         let semaphore = Arc::new(Semaphore::new(MAX_CONCURRENT_TASKS));
@@ -59,7 +59,7 @@ impl BlockExecutor {
             db,
             semaphore,
             message_broker: message_broker.clone(),
-            fuel_streams: fuel_streams.clone(),
+            pedronauck_streams: pedronauck_streams.clone(),
             fuel_stores: fuel_stores.clone(),
             telemetry,
         }
@@ -113,7 +113,7 @@ impl BlockExecutor {
     ) -> Result<(), ConsumerError> {
         let db = self.db.clone();
         let semaphore = self.semaphore.clone();
-        let fuel_streams = self.fuel_streams.clone();
+        let pedronauck_streams = self.pedronauck_streams.clone();
         let fuel_stores = self.fuel_stores.clone();
         let payload = msg.payload();
         let msg_payload = MsgPayload::decode(&payload).await?.arc();
@@ -136,11 +136,12 @@ impl BlockExecutor {
             let semaphore = semaphore.clone();
             let packets = packets.clone();
             let msg_payload = msg_payload.clone();
-            let fuel_streams = fuel_streams.clone();
+            let pedronauck_streams = pedronauck_streams.clone();
             async move {
                 let _permit = semaphore.acquire_owned().await?;
                 let result =
-                    handle_streams(&fuel_streams, &packets, &msg_payload).await;
+                    handle_streams(&pedronauck_streams, &packets, &msg_payload)
+                        .await;
                 Ok(ProcessResult::Stream(result))
             }
         });
@@ -227,7 +228,7 @@ async fn handle_stores(
 }
 
 async fn handle_streams(
-    fuel_streams: &Arc<FuelStreams>,
+    pedronauck_streams: &Arc<FuelStreams>,
     packets: &Arc<Vec<RecordPacket>>,
     msg_payload: &Arc<MsgPayload>,
 ) -> Result<BlockStats, ConsumerError> {
@@ -237,7 +238,7 @@ async fn handle_streams(
     let publish_futures = packets.iter().map(|packet| {
         let packet = packet.to_owned();
         let packet = packet.with_start_time(now);
-        fuel_streams.publish_by_entity(packet.arc())
+        pedronauck_streams.publish_by_entity(packet.arc())
     });
 
     match try_join_all(publish_futures).await {

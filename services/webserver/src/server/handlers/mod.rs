@@ -2,7 +2,7 @@ pub mod api_key_generate;
 pub mod websocket;
 
 use actix_web::web;
-use fuel_web_utils::{
+use pedronauck_web_utils::{
     api_key::middleware::ApiKeyAuth,
     server::{
         api::with_prefixed_route,

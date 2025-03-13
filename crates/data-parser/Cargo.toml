@@ -1,5 +1,5 @@
 [package]
-name = "fuel-data-parser"
+name = "pedronauck-data-parser"
 description = "A parser for Fuel blockchain data structures and formats"
 authors.workspace = true
 edition.workspace = true

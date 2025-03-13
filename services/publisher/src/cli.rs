@@ -1,5 +1,5 @@
 //! This binary subscribes to events emitted from a Fuel client or node
-//! to publish streams that can consumed via the `fuel-streams` SDK.
+//! to publish streams that can consumed via the `pedronauck-streams` SDK.
 
 use clap::Parser;
 

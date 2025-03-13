@@ -96,7 +96,7 @@ impl Db {
                 .map_err(|e| {
                     DbError::Open(sqlx::Error::Configuration(Box::new(e)))
                 })?
-                .application_name("fuel-streams")
+                .application_name("pedronauck-streams")
                 .options(Self::connect_opts(opts));
 
         sqlx::postgres::PgPoolOptions::new()

@@ -14,18 +14,18 @@
         <a href="https://codecov.io/gh/FuelLabs/data-systems" style="text-decoration: none;">
             <img src="https://codecov.io/gh/FuelLabs/data-systems/graph/badge.svg?token=1zna00scwj" alt="Coverage">
         </a>
-        <a href="https://crates.io/crates/fuel-data-parser" style="text-decoration: none;">
-            <img alt="Crates.io MSRV" src="https://img.shields.io/crates/msrv/fuel-data-parser">
+        <a href="https://crates.io/crates/pedronauck-data-parser" style="text-decoration: none;">
+            <img alt="Crates.io MSRV" src="https://img.shields.io/crates/msrv/pedronauck-data-parser">
         </a>
-        <a href="https://crates.io/crates/fuel-data-parser" style="text-decoration: none;">
-            <img src="https://img.shields.io/crates/v/fuel-data-parser?label=latest" alt="crates.io">
+        <a href="https://crates.io/crates/pedronauck-data-parser" style="text-decoration: none;">
+            <img src="https://img.shields.io/crates/v/pedronauck-data-parser?label=latest" alt="crates.io">
         </a>
-        <a href="https://docs.rs/fuel-data-parser/" style="text-decoration: none;">
-            <img src="https://docs.rs/fuel-data-parser/badge.svg" alt="docs">
+        <a href="https://docs.rs/pedronauck-data-parser/" style="text-decoration: none;">
+            <img src="https://docs.rs/pedronauck-data-parser/badge.svg" alt="docs">
         </a>
     </p>
     <p align="center">
-        <a href="https://docs.rs/fuel-data-parser">📚 Documentation</a>
+        <a href="https://docs.rs/pedronauck-data-parser">📚 Documentation</a>
         <span>&nbsp;</span>
         <a href="https://github.com/fuellabs/data-systems/issues/new?labels=bug&template=bug-report---.md">🐛 Report Bug</a>
         <span>&nbsp;</span>
@@ -42,7 +42,7 @@ The `DataParser` struct provides functionality for encoding and decoding data th
 This library is intended for internal use within the Fuel Data Systems project. This is an example of usage outside of this crate within the project:
 
 ```rust
-use fuel_data_parser::{DataEncoder, DataParser, SerializationType, DataParserError};
+use pedronauck_data_parser::{DataEncoder, DataParser, SerializationType, DataParserError};
 use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

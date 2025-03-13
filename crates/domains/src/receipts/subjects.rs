@@ -1,5 +1,5 @@
-use fuel_streams_subject::subject::*;
-use fuel_streams_types::*;
+use pedronauck_streams_subject::subject::*;
+use pedronauck_streams_types::*;
 use serde::{Deserialize, Serialize};
 
 use super::ReceiptType;

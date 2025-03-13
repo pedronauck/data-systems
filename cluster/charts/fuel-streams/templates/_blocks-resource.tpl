@@ -32,7 +32,7 @@ Returns: Basic resource metadata including:
   - app: Chart name
 */}}
 {{- define "k8s.resource-metadata.default" -}}
-{{ $fullname := include "fuel-streams.fullname" .root -}}
+{{ $fullname := include "pedronauck-streams.fullname" .root -}}
 {{ $name := printf "%s-%s" $fullname .name -}}
 name: {{ $name }}
 namespace: {{ .root.Release.Namespace }}
@@ -67,7 +67,7 @@ Returns: Labels including common labels, custom labels from config.labels, and c
 */}}
 {{- define "k8s.resource-metadata.labels" -}}
 labels:
-  {{- include "fuel-streams.labels" (dict "name" .name "context" .root) | nindent 2 }}
+  {{- include "pedronauck-streams.labels" (dict "name" .name "context" .root) | nindent 2 }}
   {{- if .component }}
   app.kubernetes.io/component: {{ .component }}
   {{- end }}

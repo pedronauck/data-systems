@@ -1,9 +1,9 @@
 use async_trait::async_trait;
-use fuel_streams_store::{
+use pedronauck_streams_store::{
     db::{DbError, DbResult},
     record::{DataEncoder, Record, RecordEntity},
 };
-use fuel_streams_types::BlockTimestamp;
+use pedronauck_streams_types::BlockTimestamp;
 use sqlx::PgExecutor;
 
 use super::{Utxo, UtxoDbItem};

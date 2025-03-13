@@ -1,6 +1,6 @@
-use fuel_streams_core::StreamError;
-use fuel_streams_domains::MsgPayloadError;
-use fuel_streams_store::{
+use pedronauck_streams_core::StreamError;
+use pedronauck_streams_domains::MsgPayloadError;
+use pedronauck_streams_store::{
     record::{RecordEntityError, RecordPacketError},
     store::StoreError,
 };
@@ -24,7 +24,7 @@ pub enum ConsumerError {
     #[error(transparent)]
     Semaphore(#[from] tokio::sync::AcquireError),
     #[error(transparent)]
-    Db(#[from] fuel_streams_store::db::DbError),
+    Db(#[from] pedronauck_streams_store::db::DbError),
     #[error(transparent)]
     Store(#[from] StoreError),
     #[error(transparent)]
@@ -32,7 +32,7 @@ pub enum ConsumerError {
     #[error(transparent)]
     PacketError(#[from] RecordPacketError),
     #[error(transparent)]
-    MessageBrokerClient(#[from] fuel_message_broker::MessageBrokerError),
+    MessageBrokerClient(#[from] pedronauck_message_broker::MessageBrokerError),
     #[error(transparent)]
     Sqlx(#[from] sqlx::Error),
     #[error(transparent)]

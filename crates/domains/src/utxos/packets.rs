@@ -2,9 +2,9 @@ use std::sync::Arc;
 
 use async_trait::async_trait;
 use fuel_core_types::fuel_types;
-use fuel_streams_store::record::{PacketBuilder, Record, RecordPacket};
-use fuel_streams_subject::subject::IntoSubject;
-use fuel_streams_types::{ContractId, TxId};
+use pedronauck_streams_store::record::{PacketBuilder, Record, RecordPacket};
+use pedronauck_streams_types::{ContractId, TxId};
+use pedronauck_streams_subject::subject::IntoSubject;
 use rayon::prelude::*;
 
 use super::{subjects::*, types::*};

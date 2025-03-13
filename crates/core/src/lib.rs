@@ -6,13 +6,13 @@ pub mod stream;
 pub use stream::*;
 
 pub mod prelude {
-    pub use fuel_streams_subject::subject::*;
+    pub use pedronauck_streams_subject::subject::*;
 
     pub use crate::{stream::*, subjects::*, types::*};
 }
 
 pub mod types {
-    pub use fuel_streams_domains::{
+    pub use pedronauck_streams_domains::{
         blocks::types::*,
         inputs::types::*,
         outputs::types::*,
@@ -20,13 +20,13 @@ pub mod types {
         transactions::types::*,
         utxos::types::*,
     };
-    pub use fuel_streams_types::*;
+    pub use pedronauck_streams_types::*;
 
     pub use crate::server::*;
 }
 
 pub mod subjects {
-    pub use fuel_streams_domains::{
+    pub use pedronauck_streams_domains::{
         blocks::subjects::*,
         inputs::subjects::*,
         outputs::subjects::*,
@@ -34,13 +34,13 @@ pub mod subjects {
         transactions::subjects::*,
         utxos::subjects::*,
     };
-    pub use fuel_streams_subject::subject::*;
+    pub use pedronauck_streams_subject::subject::*;
 }
 
 macro_rules! export_module {
     ($module:ident) => {
         pub mod $module {
-            pub use fuel_streams_domains::$module::subjects::*;
+            pub use pedronauck_streams_domains::$module::subjects::*;
         }
     };
 }

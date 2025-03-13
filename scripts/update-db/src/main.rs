@@ -1,9 +1,9 @@
 use std::sync::Arc;
 
 use anyhow::Result;
-use fuel_streams_domains::blocks::Block;
-use fuel_streams_store::record::DataEncoder;
-use fuel_streams_types::BlockTimestamp;
+use pedronauck_streams_domains::blocks::Block;
+use pedronauck_streams_store::record::DataEncoder;
+use pedronauck_streams_types::BlockTimestamp;
 use rayon::prelude::*;
 use sqlx::PgPool;
 use tokio::{sync::Semaphore, task::JoinSet};

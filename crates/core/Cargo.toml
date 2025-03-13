@@ -1,5 +1,5 @@
 [package]
-name = "fuel-streams-core"
+name = "pedronauck-streams-core"
 description = "Core components for working with streams of Fuel blockchain data"
 authors.workspace = true
 edition.workspace = true
@@ -16,15 +16,15 @@ async-nats.workspace = true
 async-stream.workspace = true
 dotenvy.workspace = true
 fuel-core.workspace = true
-fuel-message-broker.workspace = true
-fuel-streams-domains.workspace = true
-fuel-streams-store.workspace = true
-fuel-streams-subject.workspace = true
-fuel-streams-types.workspace = true
 fuel-tx.workspace = true
 fuel-vm.workspace = true
-fuel-web-utils.workspace = true
 futures.workspace = true
+pedronauck-message-broker.workspace = true
+pedronauck-streams-domains.workspace = true
+pedronauck-streams-store.workspace = true
+pedronauck-streams-subject.workspace = true
+pedronauck-streams-types.workspace = true
+pedronauck-web-utils.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 thiserror.workspace = true
@@ -41,10 +41,10 @@ default = []
 openapi = ["utoipa/actix_extras"]
 test-helpers = [
   "fuel-core/test-helpers",
-  "fuel-message-broker/test-helpers",
-  "fuel-streams-domains/test-helpers",
-  "fuel-streams-subject/test-helpers",
-  "fuel-streams-store/test-helpers",
-  "fuel-streams-types/test-helpers",
-  "fuel-web-utils/test-helpers",
+  "pedronauck-message-broker/test-helpers",
+  "pedronauck-streams-domains/test-helpers",
+  "pedronauck-streams-subject/test-helpers",
+  "pedronauck-streams-store/test-helpers",
+  "pedronauck-streams-types/test-helpers",
+  "pedronauck-web-utils/test-helpers",
 ]

@@ -1,5 +1,5 @@
 [package]
-name = "fuel-streams"
+name = "pedronauck-streams"
 description = "A library for working with streams of Fuel blockchain data"
 authors.workspace = true
 edition.workspace = true
@@ -11,9 +11,9 @@ rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
-fuel-streams-core.workspace = true
-fuel-streams-store.workspace = true
 futures.workspace = true
+pedronauck-streams-core.workspace = true
+pedronauck-streams-store.workspace = true
 reqwest = "0.12.9"
 serde.workspace = true
 serde_json.workspace = true
@@ -29,8 +29,8 @@ tokio.workspace = true
 [features]
 default = []
 test-helpers = [
-  "fuel-streams-core/test-helpers",
-  "fuel-streams-store/test-helpers",
+  "pedronauck-streams-core/test-helpers",
+  "pedronauck-streams-store/test-helpers",
 ]
 
 [package.metadata.docs.rs]

@@ -1,8 +1,8 @@
 use std::{sync::Arc, time::Duration};
 
 use anyhow::Result;
-use fuel_streams::prelude::*;
-use fuel_streams_core::{
+use pedronauck_streams::prelude::*;
+use pedronauck_streams_core::{
     blocks::BlocksSubject,
     inputs::InputsCoinSubject,
     outputs::OutputsCoinSubject,

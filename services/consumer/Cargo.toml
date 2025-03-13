@@ -22,14 +22,14 @@ bincode.workspace = true
 clap.workspace = true
 dotenvy.workspace = true
 fuel-core.workspace = true
-fuel-message-broker.workspace = true
-fuel-streams-core.workspace = true
-fuel-streams-domains.workspace = true
-fuel-streams-store.workspace = true
 fuel-tx.workspace = true
 fuel-vm.workspace = true
-fuel-web-utils.workspace = true
 futures.workspace = true
+pedronauck-message-broker.workspace = true
+pedronauck-streams-core.workspace = true
+pedronauck-streams-domains.workspace = true
+pedronauck-streams-store.workspace = true
+pedronauck-web-utils.workspace = true
 prometheus = { version = "0.13", features = ["process"] }
 serde_json.workspace = true
 sqlx = { workspace = true, default-features = false, features = [
@@ -48,11 +48,11 @@ tracing.workspace = true
 default = []
 test-helpers = [
   "fuel-core/test-helpers",
-  "fuel-message-broker/test-helpers",
-  "fuel-streams-core/test-helpers",
-  "fuel-streams-domains/test-helpers",
-  "fuel-streams-store/test-helpers",
-  "fuel-web-utils/test-helpers",
+  "pedronauck-message-broker/test-helpers",
+  "pedronauck-streams-core/test-helpers",
+  "pedronauck-streams-domains/test-helpers",
+  "pedronauck-streams-store/test-helpers",
+  "pedronauck-web-utils/test-helpers",
 ]
 
 [target.x86_64-unknown-linux-gnu.dependencies]

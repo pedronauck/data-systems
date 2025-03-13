@@ -4,8 +4,8 @@
 {{- $certificate := $tls.certificate }}
 {{- $ingress := $tls.ingress }}
 {{- $component := "api" -}}
-{{- $secretName := printf "%s-api-tls" (include "fuel-streams.fullname" .) -}}
-{{- $serviceName := printf "%s-api" (include "fuel-streams.fullname" .) -}}
+{{- $secretName := printf "%s-api-tls" (include "pedronauck-streams.fullname" .) -}}
+{{- $serviceName := printf "%s-api" (include "pedronauck-streams.fullname" .) -}}
 {{- $certificateDict := dict "root" . "context" $certificate "name" "api-cert" "component" $component -}}
 {{- $ingressDict := dict "root" . "context" $ingress "name" "api-cert-validator" "component" $component -}}
 {{- if and $api.enabled $service.host }}

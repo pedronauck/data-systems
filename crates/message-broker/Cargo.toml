@@ -1,5 +1,5 @@
 [package]
-name = "fuel-message-broker"
+name = "pedronauck-message-broker"
 description = "A message broker for the Fuel Streams"
 authors.workspace = true
 edition.workspace = true

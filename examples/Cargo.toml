@@ -1,5 +1,5 @@
 [package]
-name = "fuel-streams-examples"
+name = "pedronauck-streams-examples"
 authors.workspace = true
 edition.workspace = true
 homepage.workspace = true
@@ -12,8 +12,8 @@ publish = false
 
 [dependencies]
 anyhow.workspace = true
-fuel-streams = { workspace = true, features = ["test-helpers"] }
 futures.workspace = true
+pedronauck-streams = { workspace = true, features = ["test-helpers"] }
 tokio.workspace = true
 
 [[example]]

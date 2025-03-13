@@ -9,18 +9,18 @@ pub mod receipts;
 pub mod transactions;
 pub mod utxos;
 use actix_web::{http::StatusCode, web};
-use fuel_streams_core::types::{StreamResponse, StreamResponseError};
-use fuel_streams_domains::{
+use open_api::ApiDoc;
+use pedronauck_streams_core::types::{StreamResponse, StreamResponseError};
+use pedronauck_streams_domains::{
     inputs::InputType,
     outputs::OutputType,
     receipts::ReceiptType,
 };
-use fuel_streams_store::{db::DbItem, record::RecordPointer};
-use fuel_web_utils::{
+use pedronauck_streams_store::{db::DbItem, record::RecordPointer};
+use pedronauck_web_utils::{
     api_key::middleware::ApiKeyAuth,
     server::api::with_prefixed_route,
 };
-use open_api::ApiDoc;
 use serde::Serialize;
 use utoipa::OpenApi;
 use utoipa_swagger_ui::SwaggerUi;

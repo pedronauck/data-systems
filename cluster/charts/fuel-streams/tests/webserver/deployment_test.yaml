@@ -21,7 +21,7 @@ tests:
         documentIndex: 0
       - equal:
           path: metadata.name
-          value: RELEASE-NAME-fuel-streams-webserver
+          value: RELEASE-NAME-pedronauck-streams-webserver
         documentIndex: 0
       - equal:
           path: metadata.labels["app.kubernetes.io/name"]
@@ -193,21 +193,21 @@ tests:
       webserver.enabled: true
       webserver.envFrom:
         - configMapRef:
-            name: RELEASE-NAME-fuel-streams-config
+            name: RELEASE-NAME-pedronauck-streams-config
         - secretRef:
-            name: RELEASE-NAME-fuel-streams-keys
+            name: RELEASE-NAME-pedronauck-streams-keys
     asserts:
       - contains:
           path: spec.template.spec.containers[0].envFrom
           content:
             configMapRef:
-              name: RELEASE-NAME-fuel-streams-config
+              name: RELEASE-NAME-pedronauck-streams-config
         documentIndex: 0
       - contains:
           path: spec.template.spec.containers[0].envFrom
           content:
             secretRef:
-              name: RELEASE-NAME-fuel-streams-keys
+              name: RELEASE-NAME-pedronauck-streams-keys
         documentIndex: 0
 
   - it: should set security context when specified

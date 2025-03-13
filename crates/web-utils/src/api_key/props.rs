@@ -1,4 +1,4 @@
-use fuel_streams_types::{declare_integer_wrapper, declare_string_wrapper};
+use pedronauck_streams_types::{declare_integer_wrapper, declare_string_wrapper};
 
 #[derive(thiserror::Error, Debug)]
 pub enum ApiKeyIdError {

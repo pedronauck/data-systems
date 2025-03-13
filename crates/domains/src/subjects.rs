@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use fuel_streams_subject::subject::{
+use pedronauck_streams_subject::subject::{
     IntoSubject,
     SubjectPayload,
     SubjectPayloadError,
@@ -144,7 +144,7 @@ impl_try_from_subjects!(
 #[allow(clippy::disallowed_macros)]
 #[cfg(test)]
 mod tests {
-    use fuel_streams_store::record::{RecordEntity, RecordEntityError};
+    use pedronauck_streams_store::record::{RecordEntity, RecordEntityError};
     use serde_json::json;
     use test_case::test_case;
 

@@ -1,5 +1,5 @@
 use async_trait::async_trait;
-use fuel_web_utils::telemetry::metrics::TelemetryMetrics;
+use pedronauck_web_utils::telemetry::metrics::TelemetryMetrics;
 use prometheus::{
     register_histogram_vec,
     register_int_counter_vec,

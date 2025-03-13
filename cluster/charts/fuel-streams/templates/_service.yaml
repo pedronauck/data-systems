@@ -43,7 +43,7 @@ spec:
     {{- end }}
     {{- end }}
   selector:
-    {{- include "fuel-streams.selectorLabels" (dict "name" $name "context" $root) | nindent 4 }}
+    {{- include "pedronauck-streams.selectorLabels" (dict "name" $name "context" $root) | nindent 4 }}
     app.kubernetes.io/component: {{ $component }}
 {{- end }}
 {{- end }}

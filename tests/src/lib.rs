@@ -3,13 +3,13 @@ mod fuel_core_helpers;
 use std::sync::Arc;
 
 pub use fuel_core_helpers::*;
-use fuel_message_broker::NatsMessageBroker;
-use fuel_streams_core::{stream::*, subjects::IntoSubject, types::Block};
-use fuel_streams_domains::{
+use pedronauck_message_broker::NatsMessageBroker;
+use pedronauck_streams_core::{stream::*, subjects::IntoSubject, types::Block};
+use pedronauck_streams_domains::{
     blocks::{subjects::BlocksSubject, types::MockBlock, BlockDbItem},
     MockMsgPayload,
 };
-use fuel_streams_store::{
+use pedronauck_streams_store::{
     db::{Db, DbConnectionOpts, DbResult},
     record::{DbTransaction, Record, RecordPacket},
     store::Store,

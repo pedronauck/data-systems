@@ -1,7 +1,7 @@
 apiVersion: v2
 appVersion: "1.0"
 description: A Helm chart for Kubernetes
-name: fuel-streams
+name: pedronauck-streams
 version: 0.10.17
 dependencies:
   - name: nats

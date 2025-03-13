@@ -1,5 +1,5 @@
-pub use fuel_streams_types::BlockHeight;
-use fuel_streams_types::{fuel_core::*, primitives::*};
+pub use pedronauck_streams_types::BlockHeight;
+use pedronauck_streams_types::{fuel_core::*, primitives::*};
 use serde::{Deserialize, Serialize};
 
 // Block type

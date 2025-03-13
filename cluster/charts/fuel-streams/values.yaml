@@ -101,14 +101,14 @@ commonConfigMap:
   enabled: true
   data:
     USE_METRICS: "false"
-    NATS_URL: "fuel-streams-nats:4222"
+    NATS_URL: "pedronauck-streams-nats:4222"
     NATS_SYSTEM_USER: "sys"
     NATS_SYSTEM_PASS: "sys"
     NATS_ADMIN_USER: "admin"
     NATS_ADMIN_PASS: "admin"
-    # For local purposes only, for production use fuel-streams-keys secret
+    # For local purposes only, for production use pedronauck-streams-keys secret
     DB_TYPE: "Aurora"
-    DATABASE_URL: "postgresql://postgres:postgres@127.0.0.1:5432/fuel_streams?sslmode=disable"
+    DATABASE_URL: "postgresql://postgres:postgres@127.0.0.1:5432/pedronauck_streams?sslmode=disable"
 
 # This is a secret that is used for local development
 # It is not used in production
@@ -145,7 +145,7 @@ publisher:
   # using a map or an array of key-value pairs
   envFrom: []
   env:
-    TMPDIR: "/var/fuel-streams/tmp"
+    TMPDIR: "/var/pedronauck-streams/tmp"
     DB_PATH: /mnt/db
     FUEL_CORE_PORT: 4004
 

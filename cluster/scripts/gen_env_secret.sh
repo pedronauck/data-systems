@@ -4,7 +4,7 @@
 source .env
 
 # Generate the YAML configuration
-cat << EOF > cluster/charts/fuel-streams/values-secrets.yaml
+cat << EOF > cluster/charts/pedronauck-streams/values-secrets.yaml
 localSecrets:
   enabled: true
   data:

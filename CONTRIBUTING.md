@@ -61,7 +61,7 @@ Here's an overview of the project's directory structure:
 - `crates/`: Contains the main Rust crates for the project
     - `data-parser/`: Utility library for encoding/decoding data
     - `message-broker/`: Message broker implementation
-    - `fuel-streams/`: Main fuel-streams package
+    - `pedronauck-streams/`: Main pedronauck-streams package
     - `core/`: Core components for working with streams
     - `domains/`: Domain-specific implementations
     - `subject/`: Macro utilities for the project
@@ -316,12 +316,12 @@ The scope field is mandatory and must be one of the following:
 
 **Core Packages:**
 
-- `fuel-streams`: Main fuel-streams package
-- `fuel-streams-core`: Core components and utilities
-- `fuel-streams-domains`: Domain-specific implementations
-- `fuel-streams-types`: Common types and traits
-- `fuel-streams-subject`: Macro utilities
-- `fuel-streams-store`: Storage implementations
+- `pedronauck-streams`: Main pedronauck-streams package
+- `pedronauck-streams-core`: Core components and utilities
+- `pedronauck-streams-domains`: Domain-specific implementations
+- `pedronauck-streams-types`: Common types and traits
+- `pedronauck-streams-subject`: Macro utilities
+- `pedronauck-streams-store`: Storage implementations
 
 **Service Packages:**
 
@@ -331,10 +331,10 @@ The scope field is mandatory and must be one of the following:
 
 **Support Packages:**
 
-- `fuel-data-parser`: Data parser utilities
-- `fuel-message-broker`: Message broker implementation
-- `fuel-streams-test`: Testing utilities
-- `fuel-web-utils`: Web utilities
+- `pedronauck-data-parser`: Data parser utilities
+- `pedronauck-message-broker`: Message broker implementation
+- `pedronauck-streams-test`: Testing utilities
+- `pedronauck-web-utils`: Web utilities
 
 **Repository:**
 
@@ -352,7 +352,7 @@ For breaking changes:
 Example of a breaking change commit:
 
 ```
-feat(fuel-streams-core)!: implement new streaming protocol
+feat(pedronauck-streams-core)!: implement new streaming protocol
 
 [optional body explaining the changes in detail]
 
@@ -382,9 +382,9 @@ For this automation to work effectively:
 Example of how commits affect releases:
 
 ```
-feat(fuel-streams): add new feature  // Minor version bump
+feat(pedronauck-streams): add new feature  // Minor version bump
 fix(sv-publisher): fix bug           // Patch version bump
-feat(fuel-streams-core)!: breaking   // Major version bump
+feat(pedronauck-streams-core)!: breaking   // Major version bump
 ```
 
 ### 📋 Pull Request Guidelines
@@ -400,7 +400,7 @@ When creating a PR:
 Example PR title:
 
 ```
-feat(fuel-streams-core)!: implement new streaming protocol
+feat(pedronauck-streams-core)!: implement new streaming protocol
 ```
 
 This structured approach to commits and PRs ensures:

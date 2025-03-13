@@ -1,17 +1,17 @@
-use fuel_streams_core::{
+use pedronauck_streams_core::{
     subjects::{SubjectBuildable, TransactionsSubject},
     types::{MockInput, MockOutput, MockReceipt, MockTransaction, Transaction},
 };
-use fuel_streams_domains::{
+use pedronauck_streams_domains::{
     transactions::TransactionDbItem,
     MockMsgPayload,
     Subjects,
 };
-use fuel_streams_store::{
+use pedronauck_streams_store::{
     record::{QueryOptions, Record, RecordPacket},
     store::Store,
 };
-use fuel_streams_test::{
+use pedronauck_streams_test::{
     close_db,
     create_random_db_name,
     setup_db,

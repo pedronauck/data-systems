@@ -10,7 +10,7 @@ Returns: YAML configuration for pod template metadata
 {{- define "k8s.template-labels" -}}
 labels:
   {{- $component := .component | default .name }}
-  {{- include "fuel-streams.labels" (dict "name" .name "context" .root) | nindent 2 }}
+  {{- include "pedronauck-streams.labels" (dict "name" .name "context" .root) | nindent 2 }}
   {{- include "set-value" (dict "context" .context "root" .root "path" "config.labels") | nindent 2 }}
   {{- if $component }}
   app.kubernetes.io/component: {{ $component }}

@@ -15,7 +15,7 @@ services:
     command:
       - -m
       - "8222"
-      - --name=fuel-streams-nats
+      - --name=pedronauck-streams-nats
       - --js
       - --config=/etc/nats/nats.conf
       - -D
@@ -33,7 +33,7 @@ services:
     environment:
       POSTGRES_USER: ${DB_USER:-postgres}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
-      POSTGRES_DB: ${DB_NAME:-fuel_streams}
+      POSTGRES_DB: ${DB_NAME:-pedronauck_streams}
       POSTGRES_MAX_CONNECTIONS: "2000"
       POSTGRES_SHARED_BUFFERS: "512MB"
     command:

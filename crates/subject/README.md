@@ -5,7 +5,7 @@
     </a>
     <h3 align="center">Fuel Streams Subject</h3>
     <p align="center">
-        Macros for implementing subject functionality in the fuel-streams ecosystem
+        Macros for implementing subject functionality in the pedronauck-streams ecosystem
     </p>
     <p align="center">
         <a href="https://github.com/FuelLabs/data-systems/actions/workflows/ci.yaml" style="text-decoration: none;">
@@ -14,18 +14,18 @@
         <a href="https://codecov.io/gh/FuelLabs/data-systems" style="text-decoration: none;">
             <img src="https://codecov.io/gh/FuelLabs/data-systems/graph/badge.svg?token=1zna00scwj" alt="Coverage">
         </a>
-        <a href="https://crates.io/crates/fuel-streams-subject" style="text-decoration: none;">
-            <img alt="Crates.io MSRV" src="https://img.shields.io/crates/msrv/fuel-streams-subject">
+        <a href="https://crates.io/crates/pedronauck-streams-subject" style="text-decoration: none;">
+            <img alt="Crates.io MSRV" src="https://img.shields.io/crates/msrv/pedronauck-streams-subject">
         </a>
-        <a href="https://crates.io/crates/fuel-streams-subject" style="text-decoration: none;">
-            <img src="https://img.shields.io/crates/v/fuel-streams-subject?label=latest" alt="crates.io">
+        <a href="https://crates.io/crates/pedronauck-streams-subject" style="text-decoration: none;">
+            <img src="https://img.shields.io/crates/v/pedronauck-streams-subject?label=latest" alt="crates.io">
         </a>
-        <a href="https://docs.rs/fuel-streams-subject/" style="text-decoration: none;">
-            <img src="https://docs.rs/fuel-streams-subject/badge.svg" alt="docs">
+        <a href="https://docs.rs/pedronauck-streams-subject/" style="text-decoration: none;">
+            <img src="https://docs.rs/pedronauck-streams-subject/badge.svg" alt="docs">
         </a>
     </p>
     <p align="center">
-        <a href="https://docs.rs/fuel-streams-subject/">📚 Documentation</a>
+        <a href="https://docs.rs/pedronauck-streams-subject/">📚 Documentation</a>
         <span>&nbsp;</span>
         <a href="https://github.com/fuellabs/data-systems/issues/new?labels=bug&template=bug-report---.md">🐛 Report Bug</a>
         <span>&nbsp;</span>
@@ -35,7 +35,7 @@
 
 # 📝 About The Project
 
-Provides macros for implementing subject functionality in the fuel-streams ecosystem.
+Provides macros for implementing subject functionality in the pedronauck-streams ecosystem.
 
 > [!NOTE]
 > This crate is specifically modeled for the Fuel Data Systems project, and is not intended for general use outside of the project.
@@ -47,7 +47,7 @@ The `Subject` derive macro allows you to easily implement the `Subject` trait fo
 Example:
 
 ```rust
-use fuel_streams_subject::subject::*;
+use pedronauck_streams_subject::subject::*;
 
 #[derive(Subject, Debug, Clone, Default, serde::Serialize, serde::Deserialize)]
 #[subject(id = "test")]

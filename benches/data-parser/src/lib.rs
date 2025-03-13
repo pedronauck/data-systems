@@ -1,4 +1,4 @@
-use fuel_streams_domains::blocks::{Block, MockBlock};
+use pedronauck_streams_domains::blocks::{Block, MockBlock};
 use rand::Rng;
 
 pub fn generate_test_block() -> Block {

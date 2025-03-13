@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use fuel_message_broker::{NatsMessageBroker, NatsQueue, NatsSubject};
-use fuel_streams_core::{
+use pedronauck_message_broker::{NatsMessageBroker, NatsQueue, NatsSubject};
+use pedronauck_streams_core::{
     inputs::InputsSubject,
     outputs::OutputsSubject,
     subjects::{
@@ -14,10 +14,10 @@ use fuel_streams_core::{
     types::Transaction,
     FuelStreams,
 };
-use fuel_streams_domains::{MockMsgPayload, MsgPayload};
-use fuel_streams_store::record::{DataEncoder, QueryOptions};
-use fuel_streams_test::{close_db, create_random_db_name, setup_db};
-use fuel_web_utils::{shutdown::ShutdownController, telemetry::Telemetry};
+use pedronauck_streams_domains::{MockMsgPayload, MsgPayload};
+use pedronauck_streams_store::record::{DataEncoder, QueryOptions};
+use pedronauck_streams_test::{close_db, create_random_db_name, setup_db};
+use pedronauck_web_utils::{shutdown::ShutdownController, telemetry::Telemetry};
 use pretty_assertions::assert_eq;
 use sv_consumer::{BlockExecutor, FuelStores};
 
@@ -202,7 +202,7 @@ async fn test_consumer_inserting_records() -> anyhow::Result<()> {
         NatsMessageBroker::setup("nats://localhost:4222", Some(&prefix))
             .await?;
 
-    let fuel_streams = FuelStreams::new(&message_broker, &db).await.arc();
+    let pedronauck_streams = FuelStreams::new(&message_broker, &db).await.arc();
     let fuel_stores = FuelStores::new(&db).with_namespace(&prefix).arc();
     let msg_payload =
         MockMsgPayload::new(1).into_inner().with_namespace(&prefix);
@@ -216,10 +216,10 @@ async fn test_consumer_inserting_records() -> anyhow::Result<()> {
         let db = db.clone();
         let shutdown = shutdown.clone();
         let message_broker = Arc::clone(&message_broker);
-        let fuel_streams = Arc::clone(&fuel_streams);
+        let pedronauck_streams = Arc::clone(&pedronauck_streams);
         let telemetry = Telemetry::new(None).await?;
         let block_executor =
-            BlockExecutor::new(db, &message_broker, &fuel_streams, telemetry);
+            BlockExecutor::new(db, &message_broker, &pedronauck_streams, telemetry);
         async move { block_executor.start(shutdown.token()).await }
     });
 

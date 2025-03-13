@@ -22,7 +22,7 @@
             "includeVars": true,
             "keepTime": true,
             "tags": [
-                "fuel-streams"
+                "pedronauck-streams"
             ],
             "targetBlank": false,
             "title": "Related Dashboards",
@@ -482,7 +482,7 @@
         "to": "now"
     },
     "tags": [
-        "fuel-streams",
+        "pedronauck-streams",
         "webserver"
     ],
     "timezone": "browser",

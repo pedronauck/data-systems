@@ -87,7 +87,7 @@ tests:
       # Certificate metadata tests
       - equal:
           path: metadata.name
-          value: RELEASE-NAME-fuel-streams-api-cert
+          value: RELEASE-NAME-pedronauck-streams-api-cert
         documentIndex: 0
       - equal:
           path: metadata.namespace
@@ -116,7 +116,7 @@ tests:
       # Ingress metadata tests
       - equal:
           path: metadata.name
-          value: RELEASE-NAME-fuel-streams-api-cert-validator
+          value: RELEASE-NAME-pedronauck-streams-api-cert-validator
         documentIndex: 1
       - equal:
           path: metadata.namespace

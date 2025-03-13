@@ -1,12 +1,12 @@
-use fuel_streams_core::{
-    subjects::*,
-    types::{StreamResponse, SubscribeRequest},
-};
 use futures::{
     stream::{SplitSink, SplitStream},
     SinkExt,
     Stream,
     StreamExt,
+};
+use pedronauck_streams_core::{
+    subjects::*,
+    types::{StreamResponse, SubscribeRequest},
 };
 use tokio::sync::RwLock;
 use tokio_tungstenite::{

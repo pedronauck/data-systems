@@ -53,7 +53,7 @@ Want to contribute? Check out our [CONTRIBUTING.md](./CONTRIBUTING.md) guide!
 
 ### 🐛 Bug Fixes
 
-- _(fuel-streams)_: Network and connection definition ([abbb143](https://github.com/FuelLabs/data-systems/commit/abbb1439366497fa0ca37d2e9c68ce9a6dbba477) @pedronauck)
+- _(pedronauck-streams)_: Network and connection definition ([abbb143](https://github.com/FuelLabs/data-systems/commit/abbb1439366497fa0ca37d2e9c68ce9a6dbba477) @pedronauck)
 
 - _(webserver)_: Handle unsubscribe messages ([1d2da62](https://github.com/FuelLabs/data-systems/commit/1d2da62a8e51fc71699daaa2906bf1d81cac2945) @pedronauck)
 

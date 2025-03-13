@@ -1,6 +1,6 @@
 #![allow(clippy::disallowed_methods)]
 
-use fuel_streams_core::types::{
+use pedronauck_streams_core::types::{
     Amount,
     BlobId,
     BlockHeader,
@@ -41,7 +41,7 @@ use fuel_streams_core::types::{
     TxPointer,
     UtxoId,
 };
-use fuel_streams_domains::{
+use pedronauck_streams_domains::{
     blocks::queryable::BlocksQuery,
     inputs::queryable::InputsQuery,
     outputs::queryable::OutputsQuery,

@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use fuel_streams_store::db::{Db, DbConnectionOpts};
-use fuel_web_utils::api_key::{ApiKey, ApiKeyRoleName};
+use pedronauck_streams_store::db::{Db, DbConnectionOpts};
+use pedronauck_web_utils::api_key::{ApiKey, ApiKeyRoleName};
 use generate_api_keys::config::Config;
 use sqlx::{Postgres, Transaction};
 use strum::IntoEnumIterator;

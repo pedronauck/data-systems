@@ -9,12 +9,12 @@ pub use error::*;
 pub use networks::*;
 
 pub mod subjects {
-    pub use fuel_streams_core::subjects::*;
+    pub use pedronauck_streams_core::subjects::*;
 }
 
 #[allow(unused_imports)]
 pub mod types {
-    pub use fuel_streams_core::types::*;
+    pub use pedronauck_streams_core::types::*;
 
     pub use crate::client::types::*;
 }

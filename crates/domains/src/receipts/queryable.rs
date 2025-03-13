@@ -1,5 +1,5 @@
-use fuel_streams_subject::subject::*;
-use fuel_streams_types::*;
+use pedronauck_streams_subject::subject::*;
+use pedronauck_streams_types::*;
 use sea_query::{Condition, Expr, Iden};
 use serde::{Deserialize, Serialize};
 
@@ -240,7 +240,7 @@ impl HasPagination for ReceiptsQuery {
 
 #[cfg(test)]
 mod test {
-    use fuel_streams_types::{
+    use pedronauck_streams_types::{
         Address,
         AssetId,
         BlockHeight,

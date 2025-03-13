@@ -83,7 +83,7 @@ nats:
     merge:
       envFrom:
         - configMapRef:
-            name: fuel-streams-config
+            name: pedronauck-streams-config
       resources:
         requests:
           cpu: 100m

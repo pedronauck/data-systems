@@ -1,21 +1,21 @@
-use fuel_streams_core::types::{MockReceipt, Receipt, Transaction};
-use fuel_streams_domains::{
+use pedronauck_streams_core::types::{MockReceipt, Receipt, Transaction};
+use pedronauck_streams_domains::{
     receipts::{DynReceiptSubject, ReceiptDbItem},
     transactions::types::MockTransaction,
     MockMsgPayload,
     Subjects,
 };
-use fuel_streams_store::{
+use pedronauck_streams_store::{
     record::{QueryOptions, Record, RecordPacket},
     store::Store,
 };
-use fuel_streams_test::{
+use pedronauck_streams_test::{
     close_db,
     create_random_db_name,
     setup_db,
     setup_store,
 };
-use fuel_streams_types::TxId;
+use pedronauck_streams_types::TxId;
 use pretty_assertions::assert_eq;
 
 async fn insert_receipt(receipt: Receipt) -> anyhow::Result<()> {

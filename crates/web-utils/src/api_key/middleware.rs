@@ -11,7 +11,7 @@ use actix_web::{
     Error,
     HttpMessage,
 };
-use fuel_streams_store::db::Db;
+use pedronauck_streams_store::db::Db;
 use futures_util::future::{ready, LocalBoxFuture, Ready};
 
 use super::ApiKeysManager;

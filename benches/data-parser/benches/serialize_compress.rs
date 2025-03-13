@@ -1,6 +1,6 @@
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 use data_parser::generate_test_block;
-use fuel_data_parser::{
+use pedronauck_data_parser::{
     DataParser,
     SerializationType,
     ALL_COMPRESSION_STRATEGIES,

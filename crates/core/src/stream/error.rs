@@ -1,11 +1,11 @@
 use async_nats::SubscribeError;
-use fuel_message_broker::MessageBrokerError;
-use fuel_streams_store::{
+use pedronauck_message_broker::MessageBrokerError;
+use pedronauck_streams_store::{
     db::{DbError, SqlxError},
     record::{RecordEntityError, RecordPacketError},
     store::StoreError,
 };
-use fuel_web_utils::api_key::ApiKeyError;
+use pedronauck_web_utils::api_key::ApiKeyError;
 
 use crate::{server::DeliverPolicyError, types::StreamResponseError};
 

@@ -1,11 +1,11 @@
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 use data_parser::generate_test_block;
-use fuel_data_parser::{
+use pedronauck_data_parser::{
     DataParser,
     SerializationType,
     DEFAULT_COMPRESSION_STRATEGY,
 };
-use fuel_streams_domains::blocks::Block;
+use pedronauck_streams_domains::blocks::Block;
 use strum::IntoEnumIterator;
 
 fn bench_deserialize(c: &mut Criterion) {

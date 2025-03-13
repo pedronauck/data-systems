@@ -1,4 +1,4 @@
-use fuel_streams_store::db::DbError;
+use pedronauck_streams_store::db::DbError;
 use tokio::task::JoinError;
 
 /// api-related errors

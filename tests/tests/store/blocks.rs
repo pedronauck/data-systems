@@ -1,10 +1,10 @@
-use fuel_streams_core::{subjects::*, types::Block};
-use fuel_streams_domains::{
+use pedronauck_streams_core::{subjects::*, types::Block};
+use pedronauck_streams_domains::{
     blocks::{subjects::BlocksSubject, types::MockBlock, BlockDbItem},
     MockMsgPayload,
 };
-use fuel_streams_store::record::Record;
-use fuel_streams_test::{close_db, create_random_db_name, setup_store};
+use pedronauck_streams_store::record::Record;
+use pedronauck_streams_test::{close_db, create_random_db_name, setup_store};
 use pretty_assertions::assert_eq;
 
 #[tokio::test]

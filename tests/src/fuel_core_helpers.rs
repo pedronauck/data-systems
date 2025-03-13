@@ -5,7 +5,7 @@ use fuel_core_types::fuel_tx::{
     TransactionBuilder,
     Word,
 };
-use fuel_streams_types::fuel_core::{
+use pedronauck_streams_types::fuel_core::{
     FuelCoreClientTransactionStatus,
     FuelCoreTransaction,
 };

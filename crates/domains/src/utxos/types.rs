@@ -1,4 +1,4 @@
-use fuel_streams_types::primitives::*;
+use pedronauck_streams_types::primitives::*;
 use serde::{Deserialize, Serialize};
 
 #[derive(

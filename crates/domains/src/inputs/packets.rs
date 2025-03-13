@@ -1,9 +1,9 @@
 use std::sync::Arc;
 
 use async_trait::async_trait;
-use fuel_streams_store::record::{PacketBuilder, Record, RecordPacket};
-use fuel_streams_subject::subject::IntoSubject;
-use fuel_streams_types::TxId;
+use pedronauck_streams_store::record::{PacketBuilder, Record, RecordPacket};
+use pedronauck_streams_subject::subject::IntoSubject;
+use pedronauck_streams_types::TxId;
 use rayon::prelude::*;
 
 use super::{subjects::*, Input};

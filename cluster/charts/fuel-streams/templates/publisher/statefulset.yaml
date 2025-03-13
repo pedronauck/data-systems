@@ -8,7 +8,7 @@ kind: StatefulSet
 metadata:
   {{- include "k8s.resource-metadata" $serviceDict | nindent 2 }}
 spec:
-  serviceName: {{ include "fuel-streams.fullname" . }}-publisher
+  serviceName: {{ include "pedronauck-streams.fullname" . }}-publisher
   {{- include "k8s.pod-spec" $serviceDict | nindent 2 }}
   template:
     {{- include "k8s.template-metadata" $serviceDict | nindent 4 }}
@@ -41,11 +41,11 @@ spec:
           command: ["/bin/sh", "-c"]
           args:
             - |
-              mkdir -p /var/fuel-streams/tmp && \
-              chown -R 1000:1000 /var/fuel-streams
+              mkdir -p /var/pedronauck-streams/tmp && \
+              chown -R 1000:1000 /var/pedronauck-streams
           volumeMounts:
             - name: var-dir
-              mountPath: /var/fuel-streams
+              mountPath: /var/pedronauck-streams
           securityContext:
             runAsUser: 0
             runAsNonRoot: false
@@ -112,7 +112,7 @@ spec:
               mountPath: {{ $publisher.storage.mountPath }}
               readOnly: false
             - name: var-dir
-              mountPath: /var/fuel-streams
+              mountPath: /var/pedronauck-streams
   volumeClaimTemplates:
     - metadata:
         name: {{ $publisher.storage.name }}

@@ -13,9 +13,9 @@ publish = false
 [dependencies]
 anyhow.workspace = true
 dotenvy.workspace = true
-fuel-streams-domains.workspace = true
-fuel-streams-store.workspace = true
-fuel-streams-types.workspace = true
+pedronauck-streams-domains.workspace = true
+pedronauck-streams-store.workspace = true
+pedronauck-streams-types.workspace = true
 rayon.workspace = true
 sqlx.workspace = true
 tokio.workspace = true

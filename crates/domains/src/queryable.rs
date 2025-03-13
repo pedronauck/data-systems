@@ -1,6 +1,6 @@
 use actix_web::{dev::Payload, web, Error, FromRequest, HttpRequest};
 use async_trait::async_trait;
-use fuel_streams_store::{db::DbItem, record::RecordPointer};
+use pedronauck_streams_store::{db::DbItem, record::RecordPointer};
 use futures::future::{ready, Ready};
 use sea_query::{
     Asterisk,

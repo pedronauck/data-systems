@@ -1,6 +1,6 @@
 use fuel_core_types::fuel_tx;
-use fuel_streams_types::{fuel_core::*, primitives::*};
-pub use fuel_streams_types::{TransactionStatus, TransactionType};
+use pedronauck_streams_types::{fuel_core::*, primitives::*};
+pub use pedronauck_streams_types::{TransactionStatus, TransactionType};
 use serde::{Deserialize, Serialize};
 
 use crate::{inputs::types::*, outputs::types::*, receipts::types::*};

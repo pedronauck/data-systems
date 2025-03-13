@@ -1,5 +1,5 @@
 [workspace]
-default-members = ["crates/fuel-streams"]
+default-members = ["crates/pedronauck-streams"]
 members = [
     "benches/*",
     "crates/*",
@@ -107,16 +107,16 @@ fuel-tx = { version = "0.60.0" }
 fuel-vm = { version = "0.60.0" }
 
 # Internal dependencies
-fuel-data-parser = { version = "0.0.27", path = "crates/data-parser" }
-fuel-message-broker = { version = "0.0.27", path = "crates/message-broker" }
-fuel-streams = { version = "0.0.27", path = "crates/fuel-streams" }
-fuel-streams-core = { version = "0.0.27", path = "crates/core" }
-fuel-streams-domains = { version = "0.0.27", path = "crates/domains" }
-fuel-streams-store = { version = "0.0.27", path = "crates/store" }
-fuel-streams-subject = { version = "0.0.27", path = "crates/subject" }
-fuel-streams-test = { version = "0.0.22", path = "crates/test" }
-fuel-streams-types = { version = "0.0.27", path = "crates/types" }
-fuel-web-utils = { version = "0.0.27", path = "crates/web-utils" }
+pedronauck-data-parser = { version = "0.0.27", path = "crates/data-parser" }
+pedronauck-message-broker = { version = "0.0.27", path = "crates/message-broker" }
+pedronauck-streams = { version = "0.0.27", path = "crates/pedronauck-streams" }
+pedronauck-streams-core = { version = "0.0.27", path = "crates/core" }
+pedronauck-streams-domains = { version = "0.0.27", path = "crates/domains" }
+pedronauck-streams-store = { version = "0.0.27", path = "crates/store" }
+pedronauck-streams-subject = { version = "0.0.27", path = "crates/subject" }
+pedronauck-streams-test = { version = "0.0.22", path = "crates/test" }
+pedronauck-streams-types = { version = "0.0.27", path = "crates/types" }
+pedronauck-web-utils = { version = "0.0.27", path = "crates/web-utils" }
 subject-derive = { version = "0.0.27", path = "crates/subject/subject-derive" }
 
 # Workspace projects

@@ -1,5 +1,5 @@
 use clap::Parser;
-use fuel_streams::FuelNetwork;
+use pedronauck_streams::FuelNetwork;
 
 #[derive(Clone, Parser)]
 pub struct Cli {

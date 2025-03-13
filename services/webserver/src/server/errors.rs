@@ -1,11 +1,11 @@
 use actix_ws::{CloseCode, CloseReason, Closed, ProtocolError};
-use fuel_streams_core::{
+use pedronauck_streams_core::{
     prelude::SubjectPayloadError,
     stream::StreamError,
     types::{MessagePayloadError, ServerRequestError},
 };
-use fuel_streams_domains::SubjectsError;
-use fuel_streams_store::{
+use pedronauck_streams_domains::SubjectsError;
+use pedronauck_streams_store::{
     db::DbError,
     record::{EncoderError, RecordEntityError},
     store::StoreError,

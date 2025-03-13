@@ -5,7 +5,7 @@ git_tag_enable = false # create a tag on github
 dependencies_update = false # update dependencies automatically
 publish = false # publish the package
 release = false # release the package
-release_always = false # release are made on every commit
+release_always = true # release are made on every commit
 semver_check = false # check if the version is a valid semver
 publish_timeout = "60m" # timeout for the publish command
 pr_labels = ["release"]
@@ -21,7 +21,7 @@ git_release_body = """
 """
 
 [[package]]
-name = "fuel-streams"
+name = "pedronauck-streams"
 changelog_update = true
 changelog_path = "./CHANGELOG.md"
 git_tag_name = "v{{ version }}"
@@ -30,14 +30,14 @@ git_release_enable = true
 release = true
 publish = true
 changelog_include = [
-    "fuel-data-parser",
-    "fuel-message-broker",
-    "fuel-streams-core",
-    "fuel-streams-domains",
-    "fuel-streams-subject",
-    "fuel-streams-store",
-    "fuel-streams-types",
-    "fuel-web-utils",
+    "pedronauck-data-parser",
+    "pedronauck-message-broker",
+    "pedronauck-streams-core",
+    "pedronauck-streams-domains",
+    "pedronauck-streams-subject",
+    "pedronauck-streams-store",
+    "pedronauck-streams-types",
+    "pedronauck-web-utils",
     "sv-api",
     "sv-consumer",
     "sv-publisher",
@@ -45,22 +45,22 @@ changelog_include = [
 ]
 
 [[package]]
-name = "fuel-data-parser"
+name = "pedronauck-data-parser"
 release = true
 publish = true
 
 [[package]]
-name = "fuel-message-broker"
+name = "pedronauck-message-broker"
 release = true
 publish = true
 
 [[package]]
-name = "fuel-streams-core"
+name = "pedronauck-streams-core"
 release = true
 publish = true
 
 [[package]]
-name = "fuel-streams-domains"
+name = "pedronauck-streams-domains"
 release = true
 publish = true
 
@@ -70,27 +70,27 @@ release = true
 publish = true
 
 [[package]]
-name = "fuel-streams-subject"
+name = "pedronauck-streams-subject"
 release = true
 publish = true
 
 [[package]]
-name = "fuel-streams-store"
+name = "pedronauck-streams-store"
 release = true
 publish = true
 
 [[package]]
-name = "fuel-streams-types"
+name = "pedronauck-streams-types"
 release = true
 publish = true
 
 [[package]]
-name = "fuel-web-utils"
+name = "pedronauck-web-utils"
 release = true
 publish = true
 
 [[package]]
-name = "fuel-streams-test"
+name = "pedronauck-streams-test"
 release = false
 publish = false
 

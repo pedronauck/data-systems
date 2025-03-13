@@ -1,5 +1,5 @@
 [package]
-name = "fuel-web-utils"
+name = "pedronauck-web-utils"
 description = "Fuel library for web utils"
 authors.workspace = true
 edition.workspace = true
@@ -23,13 +23,13 @@ derive_more = { version = "1.0", features = ["full"] }
 displaydoc.workspace = true
 dotenvy.workspace = true
 elasticsearch = "8.15.0-alpha.1"
-fuel-data-parser.workspace = true
-fuel-message-broker.workspace = true
-fuel-streams-store.workspace = true
-fuel-streams-types.workspace = true
 futures.workspace = true
 futures-util.workspace = true
 parking_lot = { version = "0.12", features = ["serde"] }
+pedronauck-data-parser.workspace = true
+pedronauck-message-broker.workspace = true
+pedronauck-streams-store.workspace = true
+pedronauck-streams-types.workspace = true
 prometheus = { version = "0.13", features = ["process"] }
 rand.workspace = true
 rust_decimal = { version = "1.13" }
@@ -61,13 +61,13 @@ pretty_assertions.workspace = true
 
 # in an individual package Cargo.toml
 [package.metadata.cargo-machete]
-ignored = ["fuel-data-parser"]
+ignored = ["pedronauck-data-parser"]
 
 [features]
 default = []
 test-helpers = [
-  "fuel-data-parser/test-helpers",
-  "fuel-message-broker/test-helpers",
-  "fuel-streams-store/test-helpers",
-  "fuel-streams-types/test-helpers",
+  "pedronauck-data-parser/test-helpers",
+  "pedronauck-message-broker/test-helpers",
+  "pedronauck-streams-store/test-helpers",
+  "pedronauck-streams-types/test-helpers",
 ]

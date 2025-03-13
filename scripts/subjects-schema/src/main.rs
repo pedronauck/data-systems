@@ -1,6 +1,6 @@
 use std::{env, fs, path::Path};
 
-use fuel_streams_domains::{
+use pedronauck_streams_domains::{
     blocks::subjects::*,
     inputs::subjects::*,
     outputs::subjects::*,
@@ -8,7 +8,7 @@ use fuel_streams_domains::{
     transactions::subjects::*,
     utxos::subjects::*,
 };
-use fuel_streams_subject::subject::{IndexMap, *};
+use pedronauck_streams_subject::subject::{IndexMap, *};
 
 fn main() {
     let block_schema = BlocksSubject::new().schema();

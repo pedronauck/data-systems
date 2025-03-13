@@ -1,6 +1,6 @@
 use std::{sync::Arc, time::Duration};
 
-use fuel_message_broker::NatsMessageBroker;
+use pedronauck_message_broker::NatsMessageBroker;
 use tokio_util::sync::CancellationToken;
 
 pub const GRACEFUL_SHUTDOWN_TIMEOUT: Duration = Duration::from_secs(90);

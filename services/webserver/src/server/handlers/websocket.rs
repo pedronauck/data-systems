@@ -6,8 +6,8 @@ use actix_web::{
     Responder,
 };
 use actix_ws::{CloseCode, CloseReason, Message, MessageStream, Session};
-use fuel_streams_core::server::ServerRequest;
-use fuel_web_utils::api_key::ApiKey;
+use pedronauck_streams_core::server::ServerRequest;
+use pedronauck_web_utils::api_key::ApiKey;
 use futures::StreamExt;
 use tokio::sync::mpsc;
 
@@ -59,7 +59,7 @@ async fn handler(
     api_key: ApiKey,
     state: web::Data<ServerState>,
 ) -> Result<(), WebsocketError> {
-    let streams = state.fuel_streams.to_owned();
+    let streams = state.pedronauck_streams.to_owned();
     let telemetry = state.telemetry.to_owned();
     let rate_limiter = state.api_keys_manager.rate_limiter().to_owned();
     let connection_checker = state.connection_checker.to_owned();

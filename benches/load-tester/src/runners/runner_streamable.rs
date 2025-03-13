@@ -2,9 +2,9 @@ use std::sync::Arc;
 
 use anyhow::Result;
 use chrono::Utc;
-use fuel_streams::{Client, FuelNetwork, SubjectPayload};
-use fuel_streams_core::{server::DeliverPolicy, subjects::IntoSubject};
 use futures::StreamExt;
+use pedronauck_streams::{Client, FuelNetwork, SubjectPayload};
+use pedronauck_streams_core::{server::DeliverPolicy, subjects::IntoSubject};
 use tokio::task::JoinHandle;
 
 use super::results::LoadTestTracker;

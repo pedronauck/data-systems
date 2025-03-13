@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use fuel_streams_domains::{
+use pedronauck_streams_domains::{
     blocks::BlockDbItem,
     inputs::InputDbItem,
     outputs::OutputDbItem,
@@ -8,7 +8,7 @@ use fuel_streams_domains::{
     transactions::TransactionDbItem,
     utxos::UtxoDbItem,
 };
-use fuel_streams_store::{
+use pedronauck_streams_store::{
     db::{DbError, DbItem},
     record::{
         DataEncoder,
@@ -20,7 +20,7 @@ use fuel_streams_store::{
         RecordPointer,
     },
 };
-use fuel_web_utils::server::api::API_VERSION;
+use pedronauck_web_utils::server::api::API_VERSION;
 use serde::{Deserialize, Serialize};
 
 use crate::types::*;

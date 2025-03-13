@@ -1,6 +1,6 @@
 use std::cmp::Ordering;
 
-use fuel_streams_store::{
+use pedronauck_streams_store::{
     db::{DbError, DbItem},
     record::{
         DataEncoder,
@@ -10,7 +10,7 @@ use fuel_streams_store::{
         RecordPointer,
     },
 };
-use fuel_streams_types::{BlockHeight, BlockTimestamp, DaBlockHeight};
+use pedronauck_streams_types::{BlockHeight, BlockTimestamp, DaBlockHeight};
 use serde::{Deserialize, Serialize};
 
 use super::BlocksSubject;

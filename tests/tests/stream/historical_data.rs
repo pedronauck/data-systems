@@ -1,23 +1,23 @@
 use std::{sync::Arc, time::Duration};
 
-use fuel_streams_core::{
+use pedronauck_streams_core::{
     server::DeliverPolicy,
     subjects::*,
     types::{Block, MockBlock},
     Stream,
     StreamError,
 };
-use fuel_streams_domains::MockMsgPayload;
-use fuel_streams_store::record::{Record, RecordPacket};
-use fuel_streams_test::{
+use pedronauck_streams_domains::MockMsgPayload;
+use pedronauck_streams_store::record::{Record, RecordPacket};
+use pedronauck_streams_test::{
     close_db,
     create_multiple_records,
     create_random_db_name,
     insert_records,
     setup_stream,
 };
-use fuel_streams_types::BlockHeight;
-use fuel_web_utils::api_key::{ApiKeyError, MockApiKeyRole};
+use pedronauck_streams_types::BlockHeight;
+use pedronauck_web_utils::api_key::{ApiKeyError, MockApiKeyRole};
 use futures::StreamExt;
 use pretty_assertions::assert_eq;
 use tokio::time::sleep;

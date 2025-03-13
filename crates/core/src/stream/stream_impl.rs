@@ -1,19 +1,19 @@
 use std::{sync::Arc, time::Duration};
 
 pub use async_nats::Subscriber as StreamLiveSubscriber;
-use fuel_message_broker::NatsMessageBroker;
-use fuel_streams_store::{
-    db::{Db, DbItem},
-    record::{DataEncoder, QueryOptions, Record},
-    store::{find_last_block_height, Store},
-};
-use fuel_streams_subject::subject::IntoSubject;
-use fuel_streams_types::BlockHeight;
-use fuel_web_utils::api_key::{ApiKeyRole, ApiKeyRoleScope};
 use futures::{
     stream::{BoxStream, Stream as FStream},
     StreamExt,
 };
+use pedronauck_streams_subject::subject::IntoSubject;
+use pedronauck_message_broker::NatsMessageBroker;
+use pedronauck_streams_store::{
+    db::{Db, DbItem},
+    record::{DataEncoder, QueryOptions, Record},
+    store::{find_last_block_height, Store},
+};
+use pedronauck_streams_types::BlockHeight;
+use pedronauck_web_utils::api_key::{ApiKeyRole, ApiKeyRoleScope};
 use tokio::{sync::OnceCell, task::spawn_blocking, time::sleep};
 
 use super::{config, StreamError};

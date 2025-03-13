@@ -1,13 +1,13 @@
 use std::sync::Arc;
 
 use clap::Parser;
-use fuel_message_broker::NatsMessageBroker;
-use fuel_streams_core::types::*;
-use fuel_streams_store::{
+use pedronauck_message_broker::NatsMessageBroker;
+use pedronauck_streams_core::types::*;
+use pedronauck_streams_store::{
     db::{Db, DbConnectionOpts},
     store::{find_next_block_to_save, BlockHeightGap},
 };
-use fuel_web_utils::{
+use pedronauck_web_utils::{
     server::api::build_and_spawn_web_server,
     shutdown::{shutdown_broker_with_timeout, ShutdownController},
     telemetry::Telemetry,

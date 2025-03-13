@@ -48,7 +48,7 @@ echo -e "\n\033[1;33mMinikube Status:\033[0m"
 minikube status
 
 # Parse command line arguments
-NAMESPACE="${1:-fuel-streams}" # Use first argument, default to "fuel-streams" if not provided
+NAMESPACE="${1:-pedronauck-streams}" # Use first argument, default to "pedronauck-streams" if not provided
 
 # Configure namespace and context
 echo -e "\n\033[1;33mConfiguring ${NAMESPACE} namespace and context:\033[0m"

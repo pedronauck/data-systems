@@ -31,8 +31,8 @@ name = "deserialize_decompress"
 path = "benches/deserialize_decompress.rs"
 
 [dependencies]
-fuel-data-parser.workspace = true
-fuel-streams-domains.workspace = true
+pedronauck-data-parser.workspace = true
+pedronauck-streams-domains.workspace = true
 rand.workspace = true
 strum.workspace = true
 tokio.workspace = true

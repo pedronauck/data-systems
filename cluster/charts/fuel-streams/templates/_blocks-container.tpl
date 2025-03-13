@@ -71,10 +71,10 @@ Parameters:
 {{- define "k8s.container-config.envFrom" -}}
 envFrom:
 - configMapRef:
-    name: {{ include "fuel-streams.fullname" .root }}-config
+    name: {{ include "pedronauck-streams.fullname" .root }}-config
     optional: true
 - secretRef:
-    name: {{ include "fuel-streams.fullname" .root }}-keys
+    name: {{ include "pedronauck-streams.fullname" .root }}-keys
     optional: true
 {{- with .context.envFrom }}
 {{ toYaml . | nindent 0 }}

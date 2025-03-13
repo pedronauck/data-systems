@@ -1,4 +1,4 @@
-use fuel_web_utils::server::api::ApiServerBuilder;
+use pedronauck_web_utils::server::api::ApiServerBuilder;
 use sv_api::{
     config::Config,
     server::{handlers, state::ServerState},

@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use fuel_streams_core::types::{
+use pedronauck_streams_core::types::{
     Block,
     Input,
     Output,
@@ -8,7 +8,7 @@ use fuel_streams_core::types::{
     Transaction,
     Utxo,
 };
-use fuel_streams_domains::{
+use pedronauck_streams_domains::{
     blocks::BlockDbItem,
     inputs::InputDbItem,
     outputs::OutputDbItem,
@@ -16,7 +16,7 @@ use fuel_streams_domains::{
     transactions::TransactionDbItem,
     utxos::UtxoDbItem,
 };
-use fuel_streams_store::{
+use pedronauck_streams_store::{
     db::Db,
     record::{DbTransaction, RecordEntity, RecordPacket},
     store::Store,

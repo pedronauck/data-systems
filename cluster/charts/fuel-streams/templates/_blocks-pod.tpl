@@ -26,7 +26,7 @@ replicas: {{ .context.config.replicaCount }}
 {{- end }}
 selector:
   matchLabels:
-    {{- include "fuel-streams.selectorLabels" (dict "name" .name "context" .root) | nindent 4 }}
+    {{- include "pedronauck-streams.selectorLabels" (dict "name" .name "context" .root) | nindent 4 }}
     app.kubernetes.io/component: {{ .component }}
 {{- end }}
 
@@ -38,7 +38,7 @@ Returns: serviceAccountName if serviceAccount creation is enabled
 */}}
 {{- define "k8s.pod-config.serviceAccount" -}}
 {{- if .root.Values.serviceAccount.create }}
-serviceAccountName: {{ include "fuel-streams.serviceAccountName" .root }}
+serviceAccountName: {{ include "pedronauck-streams.serviceAccountName" .root }}
 {{- end }}
 {{- end }}
 

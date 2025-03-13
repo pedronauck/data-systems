@@ -1,5 +1,5 @@
-use fuel_streams::prelude::*;
 use futures::StreamExt;
+use pedronauck_streams::prelude::*;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {

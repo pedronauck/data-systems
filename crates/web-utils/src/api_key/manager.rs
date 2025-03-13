@@ -1,7 +1,7 @@
 use std::{collections::HashMap, sync::Arc};
 
 use actix_web::http::header::{HeaderMap, HeaderValue, AUTHORIZATION};
-use fuel_streams_store::db::Db;
+use pedronauck_streams_store::db::Db;
 
 use super::{
     rate_limiter::RateLimitsController,

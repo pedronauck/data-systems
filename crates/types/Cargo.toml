@@ -1,5 +1,5 @@
 [package]
-name = "fuel-streams-types"
+name = "pedronauck-streams-types"
 description = "Types for fuel streams"
 authors.workspace = true
 edition.workspace = true

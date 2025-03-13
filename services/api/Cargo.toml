@@ -22,14 +22,14 @@ async-trait.workspace = true
 clap.workspace = true
 displaydoc.workspace = true
 dotenvy.workspace = true
-fuel-data-parser.workspace = true
-fuel-streams-core = { workspace = true, features = ["openapi"] }
-fuel-streams-domains.workspace = true
-fuel-streams-store.workspace = true
 fuel-tx.workspace = true
 fuel-vm.workspace = true
-fuel-web-utils.workspace = true
 num_cpus.workspace = true
+pedronauck-data-parser.workspace = true
+pedronauck-streams-core = { workspace = true, features = ["openapi"] }
+pedronauck-streams-domains.workspace = true
+pedronauck-streams-store.workspace = true
+pedronauck-web-utils.workspace = true
 prometheus = { version = "0.13", features = ["process"] }
 serde.workspace = true
 serde_json.workspace = true
@@ -45,14 +45,14 @@ validator = { version = "0.20.0", features = ["derive"] }
 
 # in an individual package Cargo.toml
 [package.metadata.cargo-machete]
-ignored = ["fuel-data-parser"]
+ignored = ["pedronauck-data-parser"]
 
 [features]
 default = []
 test-helpers = [
-  "fuel-data-parser/test-helpers",
-  "fuel-streams-store/test-helpers",
-  "fuel-web-utils/test-helpers",
+  "pedronauck-data-parser/test-helpers",
+  "pedronauck-streams-store/test-helpers",
+  "pedronauck-web-utils/test-helpers",
 ]
 
 [target.x86_64-unknown-linux-gnu.dependencies]

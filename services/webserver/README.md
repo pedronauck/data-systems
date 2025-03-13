@@ -5,7 +5,7 @@
     </a>
     <h3 align="center">Fuel Streams Websockets</h3>
     <p align="center">
-        A binary webserver that consumes events published by fuel-streams and streams them further via websockets upon subscription
+        A binary webserver that consumes events published by pedronauck-streams and streams them further via websockets upon subscription
     </p>
     <p align="center">
         <a href="https://github.com/FuelLabs/data-systems/actions/workflows/ci.yaml" style="text-decoration: none;">
@@ -26,7 +26,7 @@
 
 ## 📝 About The Project
 
-A binary that consumes events published by fuel-streams and streams them further via websockets.
+A binary that consumes events published by pedronauck-streams and streams them further via websockets.
 
 ## ⚡️ Getting Started
 

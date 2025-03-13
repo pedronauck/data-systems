@@ -1,16 +1,16 @@
-use fuel_streams_core::types::{Input, MockInput, Transaction, Utxo};
-use fuel_streams_domains::{
+use pedronauck_streams_core::types::{Input, MockInput, Transaction, Utxo};
+use pedronauck_streams_domains::{
     transactions::types::MockTransaction,
     utxos::{DynUtxoSubject, UtxoDbItem},
     MockMsgPayload,
     Subjects,
 };
-use fuel_streams_store::{
+use pedronauck_streams_store::{
     record::{QueryOptions, Record, RecordPacket},
     store::Store,
 };
-use fuel_streams_test::{create_random_db_name, setup_db, setup_store};
-use fuel_streams_types::TxId;
+use pedronauck_streams_test::{create_random_db_name, setup_db, setup_store};
+use pedronauck_streams_types::TxId;
 use pretty_assertions::assert_eq;
 
 async fn insert_utxo(input: &Input) -> anyhow::Result<()> {

@@ -1,5 +1,5 @@
 use actix_web::{web, HttpRequest, HttpResponse};
-use fuel_streams_core::types::{
+use pedronauck_streams_core::types::{
     Address,
     AssetId,
     BlockHeight,
@@ -13,7 +13,7 @@ use fuel_streams_core::types::{
     TransactionType,
     TxId,
 };
-use fuel_streams_domains::{
+use pedronauck_streams_domains::{
     blocks::queryable::{BlocksQuery, TimeRange},
     inputs::queryable::InputsQuery,
     outputs::queryable::OutputsQuery,
@@ -21,7 +21,7 @@ use fuel_streams_domains::{
     receipts::queryable::ReceiptsQuery,
     transactions::queryable::TransactionsQuery,
 };
-use fuel_web_utils::api_key::ApiKey;
+use pedronauck_web_utils::api_key::ApiKey;
 
 use super::{Error, GetDataResponse};
 use crate::server::state::ServerState;

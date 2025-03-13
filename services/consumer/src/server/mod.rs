@@ -3,12 +3,12 @@ pub(crate) mod state;
 
 use std::sync::Arc;
 
-use fuel_message_broker::NatsMessageBroker;
-use fuel_web_utils::{
+use metrics::Metrics;
+use pedronauck_message_broker::NatsMessageBroker;
+use pedronauck_web_utils::{
     server::api::build_and_spawn_web_server,
     telemetry::Telemetry,
 };
-use metrics::Metrics;
 
 use crate::{errors::ConsumerError, state::ServerState};
 

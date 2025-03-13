@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use fuel_message_broker::NatsMessageBroker;
-use fuel_streams_store::{
+use pedronauck_message_broker::NatsMessageBroker;
+use pedronauck_streams_store::{
     db::Db,
     record::{RecordEntity, RecordPacket},
 };

@@ -1,9 +1,12 @@
 use std::sync::Arc;
 
 use async_trait::async_trait;
-pub use fuel_data_parser::{DataEncoder, DataParserError as EncoderError};
-use fuel_streams_subject::subject::IntoSubject;
-use fuel_streams_types::BlockTimestamp;
+pub use pedronauck_data_parser::{
+    DataEncoder,
+    DataParserError as EncoderError,
+};
+use pedronauck_streams_subject::subject::IntoSubject;
+use pedronauck_streams_types::BlockTimestamp;
 use sqlx::{PgConnection, PgExecutor, Postgres, QueryBuilder};
 
 use super::{QueryOptions, RecordEntity, RecordPacket, RecordPointer};

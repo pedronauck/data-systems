@@ -1,5 +1,5 @@
-use fuel_streams_subject::subject::SubjectPayload;
-use fuel_web_utils::api_key::ApiKey;
+use pedronauck_streams_subject::subject::SubjectPayload;
+use pedronauck_web_utils::api_key::ApiKey;
 use serde::{Deserialize, Serialize};
 
 use super::DeliverPolicy;
@@ -41,7 +41,7 @@ impl std::fmt::Display for Subscription {
 
 #[cfg(test)]
 mod tests {
-    use fuel_web_utils::api_key::MockApiKey;
+    use pedronauck_web_utils::api_key::MockApiKey;
     use pretty_assertions::assert_eq;
     use serde_json::json;
 

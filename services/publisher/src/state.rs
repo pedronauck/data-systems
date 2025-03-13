@@ -4,8 +4,11 @@ use std::{
 };
 
 use async_trait::async_trait;
-use fuel_message_broker::NatsMessageBroker;
-use fuel_web_utils::{server::state::StateProvider, telemetry::Telemetry};
+use pedronauck_message_broker::NatsMessageBroker;
+use pedronauck_web_utils::{
+    server::state::StateProvider,
+    telemetry::Telemetry,
+};
 use serde::{Deserialize, Serialize};
 
 use crate::metrics::Metrics;

@@ -40,15 +40,15 @@ With Fuel Data Systems, developers can build sophisticated applications that lev
 
 ## 📚 Documentation
 
-- [fuel-streams](crates/fuel-streams/README.md#fuel-streams)
-    - [About The Project](crates/fuel-streams/README.md#about-the-project)
-    - [Features](crates/fuel-streams/README.md#features)
-    - [Installing](crates/fuel-streams/README.md#installing)
-    - [Usage](crates/fuel-streams/README.md#usage)
-        - [Basic Connection and Subscription](crates/fuel-streams/README.md#basic-connection-and-subscription)
-        - [Subject Types and Filtering](crates/fuel-streams/README.md#subject-types-and-filtering)
-        - [Multiple Subscriptions](crates/fuel-streams/README.md#multiple-subscriptions)
-        - [`DeliverPolicy` Options](crates/fuel-streams/README.md#deliverpolicy-options)
+- [pedronauck-streams](crates/pedronauck-streams/README.md#pedronauck-streams)
+    - [About The Project](crates/pedronauck-streams/README.md#about-the-project)
+    - [Features](crates/pedronauck-streams/README.md#features)
+    - [Installing](crates/pedronauck-streams/README.md#installing)
+    - [Usage](crates/pedronauck-streams/README.md#usage)
+        - [Basic Connection and Subscription](crates/pedronauck-streams/README.md#basic-connection-and-subscription)
+        - [Subject Types and Filtering](crates/pedronauck-streams/README.md#subject-types-and-filtering)
+        - [Multiple Subscriptions](crates/pedronauck-streams/README.md#multiple-subscriptions)
+        - [`DeliverPolicy` Options](crates/pedronauck-streams/README.md#deliverpolicy-options)
 
 ## 💪 Contributing
 

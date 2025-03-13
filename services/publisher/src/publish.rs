@@ -1,11 +1,11 @@
 use std::sync::Arc;
 
 use fuel_core_types::blockchain::SealedBlock;
-use fuel_message_broker::{NatsMessageBroker, NatsQueue, NatsSubject};
-use fuel_streams_core::types::FuelCoreLike;
-use fuel_streams_domains::{Metadata, MsgPayload};
-use fuel_streams_store::record::DataEncoder;
-use fuel_web_utils::telemetry::Telemetry;
+use pedronauck_message_broker::{NatsMessageBroker, NatsQueue, NatsSubject};
+use pedronauck_streams_core::types::FuelCoreLike;
+use pedronauck_streams_domains::{Metadata, MsgPayload};
+use pedronauck_streams_store::record::DataEncoder;
+use pedronauck_web_utils::telemetry::Telemetry;
 
 use crate::{error::PublishError, metrics::Metrics};
 

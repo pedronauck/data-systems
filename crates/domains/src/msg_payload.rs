@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use fuel_streams_store::record::{DataEncoder, EncoderError};
-use fuel_streams_types::{
+use pedronauck_streams_store::record::{DataEncoder, EncoderError};
+use pedronauck_streams_types::{
     Address,
     BlockTimestamp,
     FuelCoreAssetId,

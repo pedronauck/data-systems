@@ -1,6 +1,6 @@
 [package]
 name = "subject-derive"
-description = "Derive macro for implementing the Subject trait in the fuel-streams crate"
+description = "Derive macro for implementing the Subject trait in the pedronauck-streams crate"
 authors.workspace = true
 edition.workspace = true
 homepage.workspace = true

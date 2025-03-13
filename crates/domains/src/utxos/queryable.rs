@@ -1,5 +1,5 @@
-use fuel_streams_subject::subject::*;
-use fuel_streams_types::*;
+use pedronauck_streams_subject::subject::*;
+use pedronauck_streams_types::*;
 use sea_query::{Condition, Expr, Iden};
 use serde::{Deserialize, Serialize};
 
@@ -168,7 +168,7 @@ impl HasPagination for UtxosQuery {
 
 #[cfg(test)]
 mod test {
-    use fuel_streams_types::{BlockHeight, HexData, TxId};
+    use pedronauck_streams_types::{BlockHeight, HexData, TxId};
     use pretty_assertions::assert_eq;
 
     use crate::{

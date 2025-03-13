@@ -110,35 +110,35 @@ config_mode = os.getenv('CLUSTER_MODE', 'full')
 # Resource configurations
 RESOURCES = {
     'publisher': {
-        'name': 'fuel-streams-sv-publisher',
+        'name': 'pedronauck-streams-sv-publisher',
         'ports': ['8080:8080'],
         'labels': 'publisher',
         'config_mode': ['minimal', 'full'],
-        'deps': ['fuel-streams-nats', ]
+        'deps': ['pedronauck-streams-nats', ]
     },
     'consumer': {
-        'name': 'fuel-streams-sv-consumer',
+        'name': 'pedronauck-streams-sv-consumer',
         'ports': ['8081:8080'],
         'labels': 'consumer',
         'config_mode': ['minimal', 'full'],
-        'deps': ['fuel-streams-nats', 'fuel-streams-sv-publisher']
+        'deps': ['pedronauck-streams-nats', 'pedronauck-streams-sv-publisher']
     },
     'sv-webserver': {
-        'name': 'fuel-streams-sv-webserver',
+        'name': 'pedronauck-streams-sv-webserver',
         'ports': ['9003:9003'],
         'labels': 'ws',
         'config_mode': ['minimal', 'full'],
-        'deps': ['fuel-streams-nats']
+        'deps': ['pedronauck-streams-nats']
     },
     'sv-api': {
-        'name': 'fuel-streams-sv-api',
+        'name': 'pedronauck-streams-sv-api',
         'ports': ['9004:9004'],
         'labels': 'api',
         'config_mode': ['minimal', 'full'],
-        'deps': ['fuel-streams-sv-publisher', 'fuel-streams-sv-consumer']
+        'deps': ['pedronauck-streams-sv-publisher', 'pedronauck-streams-sv-consumer']
     },
     'nats': {
-        'name': 'fuel-streams-nats',
+        'name': 'pedronauck-streams-nats',
         'ports': ['4222:4222', '6222:6222', '7422:7422'],
         'labels': 'nats',
         'config_mode': ['minimal', 'full']
@@ -147,13 +147,13 @@ RESOURCES = {
 }
 
 k8s_yaml(helm(
-    'cluster/charts/fuel-streams',
-    name='fuel-streams',
-    namespace='fuel-streams',
+    'cluster/charts/pedronauck-streams',
+    name='pedronauck-streams',
+    namespace='pedronauck-streams',
     values=[
-        'cluster/charts/fuel-streams/values.yaml',
-        'cluster/charts/fuel-streams/values-local.yaml',
-        'cluster/charts/fuel-streams/values-secrets.yaml'
+        'cluster/charts/pedronauck-streams/values.yaml',
+        'cluster/charts/pedronauck-streams/values-local.yaml',
+        'cluster/charts/pedronauck-streams/values-secrets.yaml'
     ]
 ))
 

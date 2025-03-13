@@ -3,7 +3,7 @@
 # ------------------------------------------------------------
 
 # Version detection using shell command
-VERSION := $(shell cargo metadata --format-version=1 | jq -r '.packages[] | select(.name == "fuel-streams") | .version')
+VERSION := $(shell cargo metadata --format-version=1 | jq -r '.packages[] | select(.name == "pedronauck-streams") | .version')
 
 # Constants
 RUST_NIGHTLY_VERSION := nightly-2025-01-24
@@ -130,7 +130,7 @@ test:
 	fi
 
 helm-test:
-	helm unittest -f "tests/**/*.yaml" -f "tests/*.yaml" cluster/charts/fuel-streams
+	helm unittest -f "tests/**/*.yaml" -f "tests/*.yaml" cluster/charts/pedronauck-streams
 
 # ------------------------------------------------------------
 #  Formatting & Linting
@@ -377,7 +377,7 @@ minikube-delete:
 	@minikube delete
 
 helm-setup:
-	@cd cluster/charts/fuel-streams && helm dependency update
+	@cd cluster/charts/pedronauck-streams && helm dependency update
 
 cluster-setup: minikube-setup helm-setup
 

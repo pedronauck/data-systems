@@ -5,11 +5,11 @@ use std::{
 
 use actix_ws::{CloseCode, CloseReason, Session};
 use dashmap::DashMap;
-use fuel_streams_core::{
+use pedronauck_streams_core::{
     server::{ServerResponse, Subscription},
     FuelStreams,
 };
-use fuel_web_utils::{
+use pedronauck_web_utils::{
     api_key::{rate_limiter::RateLimitsController, ApiKey},
     telemetry::Telemetry,
 };

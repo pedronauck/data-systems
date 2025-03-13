@@ -1,4 +1,4 @@
-use fuel_streams_types::BlockHeight;
+use pedronauck_streams_types::BlockHeight;
 use serde::{Deserialize, Serialize};
 
 use crate::api_key::{

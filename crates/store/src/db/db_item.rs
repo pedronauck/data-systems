@@ -1,6 +1,6 @@
 use async_trait::async_trait;
-use fuel_data_parser::DataEncoder;
-use fuel_streams_types::{BlockHeight, BlockTimestamp};
+use pedronauck_data_parser::DataEncoder;
+use pedronauck_streams_types::{BlockHeight, BlockTimestamp};
 use sqlx::postgres::PgRow;
 
 use super::DbError;

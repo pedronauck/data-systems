@@ -1,5 +1,5 @@
 use actix_web::{http::StatusCode, web, HttpRequest, HttpResponse, Result};
-use fuel_web_utils::api_key::{
+use pedronauck_web_utils::api_key::{
     ApiKey,
     ApiKeyError,
     ApiKeyRoleName,

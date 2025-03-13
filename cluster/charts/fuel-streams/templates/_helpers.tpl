@@ -5,16 +5,16 @@ The result is truncated to 63 chars and has any trailing "-" removed to comply w
 Returns: String - The chart name, truncated and cleaned
 Example:
   Given:
-    .Chart.Name = "fuel-streams"
+    .Chart.Name = "pedronauck-streams"
     .Values.config.nameOverride = "custom-name"
   Result: "custom-name"
 
   Given:
-    .Chart.Name = "fuel-streams"
+    .Chart.Name = "pedronauck-streams"
     .Values.config.nameOverride = null
-  Result: "fuel-streams"
+  Result: "pedronauck-streams"
 */}}
-{{- define "fuel-streams.name" -}}
+{{- define "pedronauck-streams.name" -}}
 {{- default .Chart.Name .Values.config.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -34,19 +34,19 @@ Example:
 
   Given:
     .Release.Name = "my-release"
-    .Chart.Name = "fuel-streams"
+    .Chart.Name = "pedronauck-streams"
     .Values.config.nameOverride = null
     .Values.config.fullnameOverride = null
-  Result: "my-release-fuel-streams"
+  Result: "my-release-pedronauck-streams"
 
   Given:
-    .Release.Name = "fuel-streams-prod"
-    .Chart.Name = "fuel-streams"
+    .Release.Name = "pedronauck-streams-prod"
+    .Chart.Name = "pedronauck-streams"
     .Values.config.nameOverride = null
     .Values.config.fullnameOverride = null
-  Result: "fuel-streams-prod"
+  Result: "pedronauck-streams-prod"
 */}}
-{{- define "fuel-streams.fullname" -}}
+{{- define "pedronauck-streams.fullname" -}}
 {{- if .Values.config.fullnameOverride }}
 {{- .Values.config.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -65,7 +65,7 @@ Combines the chart name and version with a hyphen, replaces "+" with "_",
 and truncates to 63 chars removing any trailing "-".
 Returns: String - The chart name and version formatted for use as a label
 */}}
-{{- define "fuel-streams.chart" -}}
+{{- define "pedronauck-streams.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -82,14 +82,14 @@ Parameters:
   - .: Full context (passed automatically or as "context")
 Returns: Map - A set of key-value pairs representing Kubernetes labels
 Example:
-  {{- include "fuel-streams.labels" . }}
+  {{- include "pedronauck-streams.labels" . }}
   # Or with custom name:
-  {{- include "fuel-streams.labels" (dict "name" "custom-name" "context" $) }}
+  {{- include "pedronauck-streams.labels" (dict "name" "custom-name" "context" $) }}
 */}}
-{{- define "fuel-streams.labels" -}}
+{{- define "pedronauck-streams.labels" -}}
 {{- $context := default . .context -}}
-helm.sh/chart: {{ include "fuel-streams.chart" $context }}
-{{ include "fuel-streams.selectorLabels" (dict "name" .name "context" $context) }}
+helm.sh/chart: {{ include "pedronauck-streams.chart" $context }}
+{{ include "pedronauck-streams.selectorLabels" (dict "name" .name "context" $context) }}
 {{- if $context.Chart.AppVersion }}
 app.kubernetes.io/version: {{ $context.Chart.AppVersion | quote }}
 {{- end }}
@@ -105,13 +105,13 @@ Parameters:
   - .: Full context (passed automatically or as "context")
 Returns: Map - A set of key-value pairs for Kubernetes selector labels
 Example:
-  {{- include "fuel-streams.selectorLabels" . }}
+  {{- include "pedronauck-streams.selectorLabels" . }}
   # Or with custom name:
-  {{- include "fuel-streams.selectorLabels" (dict "name" "custom-name" "context" $) }}
+  {{- include "pedronauck-streams.selectorLabels" (dict "name" "custom-name" "context" $) }}
 */}}
-{{- define "fuel-streams.selectorLabels" -}}
+{{- define "pedronauck-streams.selectorLabels" -}}
 {{- $context := default . .context -}}
-{{- $name := default (include "fuel-streams.name" $context) .name -}}
+{{- $name := default (include "pedronauck-streams.name" $context) .name -}}
 app.kubernetes.io/name: {{ $name }}
 app.kubernetes.io/instance: {{ $context.Release.Name }}
 {{- end }}
@@ -122,9 +122,9 @@ Logic:
 - If service account creation is enabled, use the fullname template with "-service-account" suffix
 Returns: String - The name of the service account to use
 */}}
-{{- define "fuel-streams.serviceAccountName" -}}
+{{- define "pedronauck-streams.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- printf "%s-%s" (include "fuel-streams.fullname" .) "service-account" }}
+{{- printf "%s-%s" (include "pedronauck-streams.fullname" .) "service-account" }}
 {{- end }}
 {{- end }}
 
@@ -256,11 +256,11 @@ Input Example:
   publisher:
     config:
       labels:
-        app: fuel-streams
+        app: pedronauck-streams
         tier: backend
 
 Result:
-  app: fuel-streams
+  app: pedronauck-streams
   tier: backend
 */}}
 {{- define "set-value" -}}

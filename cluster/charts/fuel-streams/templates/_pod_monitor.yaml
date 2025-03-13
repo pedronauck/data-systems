@@ -20,7 +20,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      {{- include "fuel-streams.selectorLabels" (dict "name" $name "context" $root) | nindent 6 }}
+      {{- include "pedronauck-streams.selectorLabels" (dict "name" $name "context" $root) | nindent 6 }}
       app.kubernetes.io/component: {{ $component }}
   podMetricsEndpoints:
     - port: http

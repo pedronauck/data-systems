@@ -1,4 +1,4 @@
-use fuel_streams_types::BlockHeight;
+use pedronauck_streams_types::BlockHeight;
 use serde::{self, Deserialize, Deserializer, Serialize};
 
 #[derive(Debug, thiserror::Error)]

@@ -1,16 +1,16 @@
-use fuel_streams_core::{subjects::*, types::Block};
-use fuel_streams_domains::{
-    blocks::{subjects::BlocksSubject, types::MockBlock},
-    MockMsgPayload,
-};
-use fuel_streams_store::record::{QueryOptions, Record};
-use fuel_streams_test::{
+use pedronauck_streams_core::{subjects::*, types::Block};
+use pedronauck_streams_store::record::{QueryOptions, Record};
+use pedronauck_streams_test::{
     close_db,
     create_multiple_records,
     create_random_db_name,
     insert_records,
     insert_records_with_transaction,
     setup_store,
+};
+use pedronauck_streams_domains::{
+    blocks::{subjects::BlocksSubject, types::MockBlock},
+    MockMsgPayload,
 };
 use pretty_assertions::assert_eq;
 

@@ -1,4 +1,4 @@
-pub use fuel_streams_core::{
+pub use pedronauck_streams_core::{
     server::{DeliverPolicy, ServerRequest, ServerResponse},
     subjects::SubjectPayload,
 };

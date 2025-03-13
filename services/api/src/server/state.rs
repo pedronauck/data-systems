@@ -4,8 +4,8 @@ use std::{
 };
 
 use async_trait::async_trait;
-use fuel_streams_store::db::{Db, DbConnectionOpts};
-use fuel_web_utils::{
+use pedronauck_streams_store::db::{Db, DbConnectionOpts};
+use pedronauck_web_utils::{
     api_key::{ApiKeysManager, KeyStorage},
     server::state::StateProvider,
     telemetry::Telemetry,

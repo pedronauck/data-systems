@@ -1,6 +1,6 @@
 use std::sync::LazyLock;
 
-use fuel_streams_types::BlockHeight;
+use pedronauck_streams_types::BlockHeight;
 
 pub static STORE_PAGINATION_LIMIT: LazyLock<usize> = LazyLock::new(|| {
     dotenvy::var("STORE_PAGINATION_LIMIT")

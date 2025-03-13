@@ -1,4 +1,4 @@
-use fuel_streams_core::types::BlockHeight;
+use pedronauck_streams_core::types::BlockHeight;
 
 use crate::errors::ConsumerError;
 

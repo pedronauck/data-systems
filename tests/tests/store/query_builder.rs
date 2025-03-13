@@ -1,13 +1,13 @@
 use std::sync::Arc;
 
-use fuel_streams_core::{
+use pedronauck_streams_core::{
     inputs::InputsCoinSubject,
     subjects::*,
     types::{Block, Input},
 };
-use fuel_streams_domains::blocks::subjects::BlocksSubject;
-use fuel_streams_store::record::{QueryOptions, Record};
-use fuel_streams_types::{Address, TxId};
+use pedronauck_streams_domains::blocks::subjects::BlocksSubject;
+use pedronauck_streams_store::record::{QueryOptions, Record};
+use pedronauck_streams_types::{Address, TxId};
 use pretty_assertions::assert_eq;
 
 #[test]

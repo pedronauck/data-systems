@@ -22,7 +22,7 @@
             "includeVars": true,
             "keepTime": true,
             "tags": [
-                "fuel-streams"
+                "pedronauck-streams"
             ],
             "targetBlank": false,
             "title": "Related Dashboards",
@@ -460,7 +460,7 @@
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
     "tags": [
-        "fuel-streams",
+        "pedronauck-streams",
         "publisher"
     ],
     "timezone": "browser",

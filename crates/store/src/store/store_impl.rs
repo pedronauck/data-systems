@@ -1,8 +1,8 @@
 use std::sync::Arc;
 
-use fuel_data_parser::DataEncoder;
-use fuel_streams_subject::subject::IntoSubject;
-use fuel_streams_types::BlockHeight;
+use pedronauck_data_parser::DataEncoder;
+use pedronauck_streams_subject::subject::IntoSubject;
+use pedronauck_streams_types::BlockHeight;
 
 use super::StoreError;
 use crate::{

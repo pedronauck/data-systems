@@ -1,5 +1,5 @@
 use actix_ws::Session;
-use fuel_streams_core::{
+use pedronauck_streams_core::{
     server::ServerResponse,
     types::{ServerRequest, Subscription},
 };

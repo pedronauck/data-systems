@@ -1,4 +1,4 @@
-use fuel_streams_store::record::RecordEntityError;
+use pedronauck_streams_store::record::RecordEntityError;
 
 #[derive(Debug, thiserror::Error)]
 pub enum ClientError {

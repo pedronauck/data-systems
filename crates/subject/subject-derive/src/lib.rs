@@ -41,7 +41,7 @@ pub fn subject_derive(input: TokenStream) -> TokenStream {
     quote! {
         #subject_expanded
 
-        impl fuel_streams_subject::subject::SubjectBuildable for #name {
+        impl pedronauck_streams_subject::subject::SubjectBuildable for #name {
             fn new() -> Self {
                 Self {
                     #(#field_names: None,)*

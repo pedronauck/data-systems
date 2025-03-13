@@ -1,8 +1,8 @@
 use std::{fmt::Debug, sync::Arc};
 
-use fuel_data_parser::{DataEncoder, DataParserError as EncoderError};
-use fuel_streams_subject::subject::SubjectPayload;
-use fuel_streams_types::{BlockHeight, BlockTimestamp};
+use pedronauck_data_parser::{DataEncoder, DataParserError as EncoderError};
+use pedronauck_streams_subject::subject::SubjectPayload;
+use pedronauck_streams_types::{BlockHeight, BlockTimestamp};
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, thiserror::Error)]
